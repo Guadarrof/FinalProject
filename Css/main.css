@@ -1,0 +1,984 @@
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+* {
+  padding: 0;
+  color: inherit;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+  color: #011B1D;
+}
+
+*:focus {
+  outline: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.form {
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
+}
+.form_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_h2 {
+  font-family: "Bebas Neue";
+  color: #015F68;
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+.form__label {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+.form__input {
+  height: 40px;
+}
+.form_p {
+  color: #FF2943;
+  margin-top: 0;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.banner {
+  width: 100vw;
+  height: 50%;
+}
+.banner-1 {
+  flex-direction: row;
+  background: linear-gradient(180deg, #FE5DAD, #f7fffd);
+  margin-top: 58px;
+  padding-top: 3rem;
+}
+.banner_img {
+  height: auto;
+  width: 35%;
+  margin: auto;
+}
+@media screen and (max-width: 560px) {
+  .banner_img {
+    display: none;
+  }
+}
+.banner_container-text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.banner__h1 {
+  font-family: "CoolFont", sans-serif;
+  font-size: 51px;
+  color: #7EDEC9;
+  text-shadow: -1px 4px 0px #f7fffd;
+}
+@media screen and (max-width: 1000px) {
+  .banner__h1 {
+    font-size: 40px;
+  }
+}
+.banner__p {
+  background-color: #EFEFEF;
+  font-size: 23px;
+  padding: 1rem;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  width: 75%;
+}
+@media screen and (max-width: 1000px) {
+  .banner__p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 890px) {
+  .banner__p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .banner__p {
+    display: none;
+  }
+}
+.banner-2 {
+  background: linear-gradient(360deg, #7EDEC9, #f7fffd);
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.banner-2 .offer_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1rem 20%;
+}
+@media screen and (max-width: 1000px) {
+  .banner-2 .offer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.banner-2 .offer_group {
+  height: 500;
+  width: 460;
+  box-shadow: none;
+}
+.banner-2 .offer_h2 {
+  font-family: "Bebas Neue";
+  color: #015F68;
+  margin-left: 6rem;
+  padding-top: 2.5rem;
+  font-size: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/pink_underline.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 90% 18%;
+  background-position-x: center;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 560px) {
+  .banner-2 .offer_h2 {
+    margin: auto;
+  }
+}
+.banner-2 .offer__img {
+  position: absolute;
+}
+.banner-2 .offer__img-1 {
+  width: 286px;
+  height: 340px;
+  left: 5px;
+  top: 40px;
+}
+.banner-2 .offer__img-2 {
+  width: 299px;
+  height: 267px;
+  left: -20px;
+  top: 95px;
+}
+.banner-2 .offer__img-3 {
+  width: 300px;
+  height: 321px;
+  left: -25px;
+  top: 55px;
+}
+.banner-2 .offer__p {
+  font-size: 23px;
+  font-weight: 600;
+  font-variant: small-caps;
+  text-align: center;
+}
+@media screen and (max-width: 560px) {
+  .banner-2 .offer__p {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 1.5rem;
+  }
+}
+.banner-2 .img-group {
+  position: relative;
+  height: 438px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 560px) {
+  .banner-2 .img-group {
+    display: none;
+  }
+}
+.banner-2 .img-background {
+  border-radius: 20px;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  height: 350px;
+  width: 200px;
+}
+.banner-2 .img-background-1 {
+  background-color: #FF9505;
+}
+.banner-2 .img-background-2 {
+  background-color: #FE5DAD;
+}
+.banner-2 .img-background-3 {
+  background-color: #FFE099;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.btn {
+  border: none;
+  font-family: "Bebas Neue";
+  font-weight: 600;
+  margin: 1rem auto;
+}
+.btn-l {
+  padding: 1rem 4.5rem;
+  font-size: 23px;
+}
+.btn-m {
+  padding: 1rem 3rem;
+  font-size: 23px;
+}
+.btn-s {
+  padding: 1rem 2rem;
+  font-size: 18px;
+}
+.btn_primary {
+  color: #015F68;
+  background-color: #f7fffd;
+  border: 2px solid #015F68;
+}
+.btn_primary:hover {
+  color: #f7fffd;
+  background-color: #015F68;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_primary-inverse {
+  color: #f7fffd;
+  background-color: #015F68;
+  border: 2px solid #015F68;
+}
+.btn_primary-inverse:hover {
+  color: #015F68;
+  background-color: #f7fffd;
+  border: 2px solid #015F68;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_secondary {
+  color: #FE5DAD;
+  background-color: #f7fffd;
+  border: 2px solid #FE5DAD;
+}
+.btn_secondary:hover {
+  color: #f7fffd;
+  background-color: #FE5DAD;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_secondary-inverse {
+  color: #f7fffd;
+  background-color: #FE5DAD;
+  border: 2px solid #FE5DAD;
+}
+.btn_secondary-inverse:hover {
+  color: #FE5DAD;
+  background-color: #f7fffd;
+  border: 2px solid #FE5DAD;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cards_group {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 18%;
+}
+@media screen and (max-width: 1130px) {
+  .cards_group {
+    margin: 1rem 15%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cards_group {
+    margin: 1rem 10%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .cards_group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .cards_group {
+    margin: 1rem 10%;
+  }
+}
+
+.img-container {
+  height: 200px;
+  width: 200px;
+}
+
+.card {
+  background-color: #f7fffd;
+  border: none;
+  padding: 1rem;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+}
+.card-m {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 500px;
+}
+@media screen and (max-width: 890px) {
+  .card-m {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.card-l {
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+  margin: 6rem;
+  display: flex;
+  flex-direction: row;
+  width: 760px;
+  height: 380px;
+}
+.card_text {
+  height: 40%;
+  margin-top: 1rem;
+  position: relative;
+}
+.card_img {
+  overflow: hidden;
+  margin: auto;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
+}
+.card__price {
+  text-align: end;
+  font-family: "Lilita One", sans-serif;
+  color: #FF2943;
+}
+.card__h3 {
+  font-size: 23px;
+  margin-bottom: 0.5rem;
+  font-family: "Bebas Neue";
+  color: #015F68;
+}
+.card__p {
+  font-size: 18px;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 300;
+}
+.card__a {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+footer {
+  width: 100vw;
+  margin-top: auto;
+  height: 300px;
+  background-color: #015F68;
+  padding: 3rem 6rem;
+}
+@media screen and (max-width: 560px) {
+  footer {
+    height: 200px;
+    padding: 1.5rem 3rem;
+  }
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.footer_div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  color: #f7fffd;
+  margin-right: 1rem;
+}
+.footer_div-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 3rem;
+}
+@media screen and (max-width: 890px) {
+  .footer_div-logo {
+    display: none;
+  }
+}
+.footer_div-social {
+  display: flex;
+  align-items: center;
+}
+.footer_h3 {
+  font-size: 23px;
+  margin-bottom: 1rem;
+  color: #f7fffd;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/pink_underline.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 90% 18%;
+  background-position-x: center;
+}
+@media screen and (max-width: 560px) {
+  .footer_h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.footer__logo {
+  content: url(../../Images/Logo.png);
+  width: 80%;
+  margin: 1rem;
+}
+.footer_email, .footer_phone {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.footer__span-email {
+  content: url(../../Images/email.png);
+  width: 20px;
+  height: auto;
+  margin-right: 6px;
+}
+@media screen and (max-width: 560px) {
+  .footer__span-email {
+    display: none;
+  }
+}
+.footer__span-phone {
+  content: url(../../Images/whappIcon.png);
+  width: 20px;
+  height: auto;
+  margin-right: 6px;
+}
+@media screen and (max-width: 560px) {
+  .footer__span-phone {
+    display: none;
+  }
+}
+.footer_social {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  .footer_social {
+    flex-direction: column;
+  }
+}
+.footer__a {
+  color: #f7fffd;
+  font-family: "Bebas Neue";
+}
+@media screen and (max-width: 560px) {
+  .footer__a {
+    display: none;
+  }
+}
+.footer__a-ig {
+  content: url(../../Images/ig.png);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__a-fb {
+  content: url(../../Images/fb.png);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__a-tk {
+  content: url(../../Images/tiktok.png);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__p {
+  color: #f7fffd;
+}
+.footer_iframe {
+  border: 3px solid #FF9505 !important;
+}
+@media screen and (max-width: 1000px) {
+  .footer_iframe {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  height: 58px;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  background-color: #f7fffd;
+  width: 100%;
+  z-index: 1;
+}
+.navbar_logo {
+  height: 45px;
+  content: url(/Images/Logo.png);
+}
+.navbar_pages {
+  font-size: 18px;
+}
+.navbar_pages a {
+  font-weight: 600;
+  padding: 0.75rem;
+  color: #015F68;
+}
+.navbar_pages a:nth-child(odd):hover {
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/orange_underline.svg");
+  background-repeat: no-repeat;
+  background-size: 90% 18%;
+  background-position-y: bottom;
+  background-position-x: center;
+}
+.navbar_pages a:nth-child(even):hover {
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/pink_underline.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 90% 18%;
+  background-position-x: center;
+}
+@media screen and (max-width: 560px) {
+  .navbar_pages {
+    display: none;
+  }
+}
+.navbar_icons {
+  display: flex;
+  flex-direction: row;
+}
+.navbar__span-cart {
+  content: url(../../Images/shopIcon.svg);
+  padding: 1rem;
+}
+.navbar__span-search {
+  content: url(../../Images/searchIcon.svg);
+  padding: 1rem;
+}
+
+.search_input {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 890px) {
+  .search_input {
+    display: none;
+  }
+}
+
+.searchbar {
+  height: 30px;
+  width: 200px;
+  border: 2px solid #FE5DAD;
+}
+.searchbar:hover, .searchbar :focus, .searchbar :focus-visible, .searchbar :active {
+  border: 2px solid #FFE099;
+}
+
+input[type=checkbox] {
+  vertical-align: -webkit-baseline-middle;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.checkbox-group .form__label {
+  vertical-align: -webkit-baseline-middle;
+}
+
+input[type=checkbox]:checked {
+  accent-color: #FE5DAD !important;
+}
+
+input, textarea {
+  border: 2px solid #015F68;
+}
+
+textarea {
+  resize: none;
+  height: 100px !important;
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file-input::before {
+  content: "Seleccionar Archivos";
+  color: #f7fffd;
+  font-family: "Bebas Neue";
+  display: inline-block;
+  background: #015F68;
+  padding: 10px 20px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.about_container {
+  background-image: url(../../Images/waveP.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+  margin: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about_img {
+  height: 338px;
+  width: 335px;
+}
+.about_card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(247, 255, 253, 0.8392156863);
+  justify-content: space-between;
+  padding: 3rem;
+}
+.about_card h1, .about_card h2, .about_card p, .about_card a {
+  font-family: "Bebas Neue";
+}
+.about_card h1 {
+  color: #015F68;
+  margin-bottom: 0.5rem;
+}
+.about_card h2 {
+  margin-bottom: 3rem;
+}
+.about_card p {
+  margin-bottom: 3rem;
+  line-height: 25px;
+}
+.about_div-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social_group {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  margin-top: 1rem;
+}
+.social_linked {
+  content: url(../../Images/linked.svg);
+  margin-right: 1rem;
+}
+.social_git {
+  content: url(../../Images/github.svg);
+  margin-right: 1rem;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.form_button-contact {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.section-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-cards_h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 6rem;
+  margin-top: 3.5rem;
+  font-family: "Bebas Neue";
+  color: #FE5DAD;
+  font-size: 30px;
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/secondunder.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 90% 18%;
+  background-position-x: center;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 560px) {
+  .section-cards_h2 {
+    margin: auto;
+    margin-top: 3.5rem;
+  }
+}
+
+.section-banner {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 890px) {
+  .btn-offers {
+    margin-top: 3rem;
+  }
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.age_group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.age_group-inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.age_group label {
+  margin-top: 0.5rem;
+}
+.age_group input {
+  height: 30px;
+}
+
+.checkbox-group {
+  margin: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.form_button-add {
+  margin: auto;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.moreOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.product_container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+  margin: 6rem;
+}
+.product_img {
+  height: 338px;
+  width: 435px;
+  display: flex;
+  justify-content: center;
+}
+.product_img img {
+  height: 100%;
+}
+.product_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .product_content {
+    flex-direction: column;
+  }
+}
+.product_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product_card h1 {
+  font-family: "Bebas Neue";
+  color: #015F68;
+  margin-bottom: 0.5rem;
+}
+.product__price {
+  font-family: "Lilita One", sans-serif;
+  margin-bottom: 1.5rem;
+}
+.product__descript-short {
+  font-size: 23px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+.product_div-info {
+  margin-left: 1.5rem;
+}
+@media screen and (max-width: 1000px) {
+  .product_div-info {
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,80 @@
+
+.cards_group{
+    display: flex;
+    justify-content: space-around;
+    margin: $base-margin 18%;
+    @media screen and (max-width: $breakpoint-xl) {
+        margin: $base-margin 15%;      
+    }
+    @media screen and (max-width: $breakpoint-l) {
+        margin: $base-margin 10%;      
+    }
+    @media screen and (max-width: $breakpoint-m) {
+        flex-direction: column;  
+        align-items: center;  
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        margin: $base-margin 10%;      
+    }
+}
+
+.img-container{
+    height: 200px;
+    width: 200px;
+}
+
+.card{
+    background-color: $white;
+    border: none;
+    padding: $base-padding;
+    box-shadow: $base-shadow;
+    margin: $base-margin;
+    &-m{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 500px;
+        @media screen and (max-width: $breakpoint-m) {
+        flex-direction: column;  
+        align-items: center;  
+    }
+    }
+    &-l{
+        box-shadow: $base-shadow;
+        padding: 5% 10%;
+        margin: $margin-xl;
+        display: flex;
+        flex-direction: row;
+        width: 760px;
+        height: 380px;
+    }
+    &_text{
+        height: 40%;
+        margin-top:$base-margin;
+        position: relative;
+    }
+    &_img{
+        @include symetricImage;
+    }
+    &__price{
+        text-align: end;
+        font-family: $tertiary-font;
+        color: $alert-color;
+    }
+    &__h3{
+        font-size: $font-size-m;
+        margin-bottom: 0.5rem;
+        font-family:$secondary-font;
+        color: $secondary-color;
+    }
+    &__p{
+        font-size: $font-size-base;
+        font-family: $primary-font;
+        font-weight: 300;
+    }
+    &__a{
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+    }
+}

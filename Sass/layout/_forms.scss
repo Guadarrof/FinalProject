@@ -1,0 +1,40 @@
+
+@use './index';
+
+.form{
+    box-shadow: $base-shadow;
+    padding: 5% 10%;
+    &_container{
+        display: flex;
+        flex-direction: column;
+        padding: 5% 20%;
+    }
+    &_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &_h2{
+        font-family: $secondary-font;
+        color: $secondary-color;
+        margin-bottom: $base-margin;
+        font-size: $font-size-l;
+    }
+    &__label{
+        margin-right: $margin-s;
+        margin-left: $margin-s;
+        margin-bottom: $margin-s;
+        margin-top: $margin-m;
+        font-size: $font-size-base;
+        font-weight: 600;   
+    }
+    &__input{
+        height: 40px;  
+    }
+
+    &_p{
+        color: $alert-color;
+        margin-top: 0;
+    }  
+
+}
