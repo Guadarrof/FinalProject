@@ -1,20 +1,23 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project - Guadalupe Arroferia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Lilita+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../Css/main.css">
 </head>
+
 <body>
     <header>
         <div class="navbar">
             <a href="./index.html" class="navbar_logo"></a>
             <div class="navbar_pages">
-                <a href="./contacto.html" class="navbar__a">Contact</a>
+                <a href="./nosotros.html" class="navbar__a">About us</a>
                 <a href="./alta.html" class="navbar__a">Add products</a>
             </div>
             <div class="navbar_icons">
@@ -28,28 +31,29 @@
         </div>
     </header>
     <main>
-        <div class="about_container">
-            <div class="about_img">
-                <img src="../Images/me.svg" alt="imagen de Guadalupe">
-            </div>
-            <div class="about_card">
-                <div class="about_div about_div-info">
-                    <h1 class="about__h1">Guadalupe Arroferia</h1>
-                    <h2 class="about__h3">Disenadora UX/UI - futura fullStack developer</h2>
-                    <p class="about__p">Nacida en Puerto Madryn, recibida en La Plata y ahora explorando el mundo y mi pasion por la tecnologia. Busco costantemente crecer y desarrollarme, aspiro a ser desarrolladora web y posiblemente algo mas. Mi sueño es ayudar a las personas dedicandome a lo que realmente me gusta</p>
+        <div class="form_container">
+            <form action="submit" class="form">
+                <div class="form_content">
+                    <h2 class="form_h2">Dejanos tu consulta</h2>
+                    <label for="nameContact" class="form__label" id="label-name">Nombre</label>
+                    <input type="text" class="form__input" name="name" id="nameContact" placeholder="Indica tu nombre">
+                    <p class="form_p" id="nameContactError"></p>
+
+
+                    <label for="emailContact" class="form__label" id="label-email">E-mail</label>
+                    <input type="email" class="form__input" name="email" id="emailContact" placeholder="nombre@email.com">
+                    <p class="form_p" id="emailContactError"></p>
+
+                    <label for="msjeContact" class="form__label" id="label-msje">Deja tu mensaje</label>
+                    <textarea class="form__input" name="msje" id="msjeContact" placeholder="Tu mensaje"></textarea>
+                    <p class="form_p" id="msjeContactError"></p>
+
                 </div>
-                <div class="about_div about_div-social">
-                    <div class="social_group">
-                        <span class="social-icon social_linked"></span>
-                        <a href="https://www.linkedin.com/in/guadalupe-arroferia" class="social__a social__a-linked">Encontrame en Linkedin</a>  
-                    </div>
-                    <div class="social_group">
-                        <span class="social-icon social_git"></span>
-                        <a href="https://github.com/Guadarrof" class="social__a social__a-git">Mis proyectos en GitHub</a>    
-                    </div>
+                <div class="form_button-contact">
+                    <button class="btn btn-s btn_primary-inverse" id="btnContact"> Enviar </button>
                 </div>
-            </div>
-        </div>    
+            </form>
+        </div>
     </main>
     <footer>
         <div class="footer_content">
@@ -89,8 +93,12 @@
                     <a href="https://www.tiktok.com/" class="footer__a footer__a-tk"></a>
                 </div>
             </div>
-            <iframe class="footer_iframe footer_iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.4687051553256!2d-57.9399814!3d-34.9197803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e622135a7231%3A0x987dcef7d90328d4!2sAv.%2060%20546%2C%20B1904%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sau!4v1705144184846!5m2!1ses!2sau" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="footer_iframe footer_iframe-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.4687051553256!2d-57.9399814!3d-34.9197803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e622135a7231%3A0x987dcef7d90328d4!2sAv.%2060%20546%2C%20B1904%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sau!4v1705144184846!5m2!1ses!2sau"
+                width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </footer> 
+    </footer>
+    <script src="../JS/contact.js" ></script>
 </body>
-</html>
+</html> -->
