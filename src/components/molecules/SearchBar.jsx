@@ -1,17 +1,16 @@
 import React from 'react'
 import InputGroup from '../atoms/InputGroup'
 
-const SearchBar = (action) => {
+const SearchBar = ({action}) => {
   return (
     <>
     <InputGroup
     label="buscar"
     type="text"
     onChange={action}
-    error="Ingrese un caracter"
+    error=""
     placeholder="Buscar juguete"
     id="search_bar"
-    hidden='true'
     />
       
     </>
