@@ -99,7 +99,7 @@
     "nombre": "Tren de Juguete",
     "precio": 29.99,
     "edad_recomendada": 2,
-    "descripcion_corta": "Tren de juguete con vías y vagones.",,
+    "descripcion_corta": "Tren de juguete con vías y vagones.",
     "img":"url"
   },
   {
@@ -109,8 +109,7 @@
     "descripcion_corta": "Kit de herramientas para pequeños constructores.",
     "descripcion_larga": "Este set de herramientas de juguete es ideal para niños que les gusta construir y reparar cosas. Viene con herramientas de plástico seguro y piezas que se pueden ensamblar y desmontar. Perfecto para fomentar la creatividad y la habilidad manual. Recomendado para niños a partir de 4 años.",
     "img":"url"
-  },,
-  "img":"url"
+  },
   {
     "nombre": "Cocinita de Juguete",
     "precio": 39.99,
