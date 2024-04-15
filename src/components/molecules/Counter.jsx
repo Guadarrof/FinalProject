@@ -7,9 +7,9 @@ const INITIAL_STATE=0;
 
 const Counter = () => {
   const [count, setCount] = useState(INITIAL_STATE)
-  const increment = ()=>{
+  const increment = ()=> setCount (count+1);
+  const decrement = ()=>{
     if(count> 0) setCount(count-1)}
-  const decrement = ()=> setCount(count+1)
 
   return (
     <div className='counter-container'>

@@ -6,10 +6,12 @@ const Button = ({
   type = "button",
   disabled,
   id,
-  className
+  className,
+  ariaLabel
 }) => {
   return (
     <button 
+    aria-label={ariaLabel}
     type={type} 
     id={id} 
     onClick={action} 
