@@ -15,6 +15,7 @@ const Counter = () => {
     <div className='counter-container'>
         <Button
         label="-"
+        ariaLabel="decrement"
         action={decrement}
         className='counter-btn'
         disabled ={count === 0}
@@ -26,6 +27,7 @@ const Counter = () => {
         />
         <Button
         label='+'
+        ariaLabel="increment"
         action={increment}
         className='counter-btn'
         />
