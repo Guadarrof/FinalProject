@@ -96,13 +96,6 @@
     "img":"url"
   },
   {
-    "nombre": "Tren de Juguete",
-    "precio": 29.99,
-    "edad_recomendada": 2,
-    "descripcion_corta": "Tren de juguete con vías y vagones.",
-    "img":"url"
-  },
-  {
     "nombre": "Set de Herramientas de Juguete",
     "precio": 19.99,
     "edad_recomendada": 4,
@@ -173,12 +166,5 @@
     "descripcion_corta": "Kit de instrumentos para pequeños músicos.",
     "descripcion_larga": "Este set de instrumentos musicales es perfecto para niños que aman la música. Viene con una variedad de instrumentos como pandereta, maracas y xilófono para explorar diferentes sonidos y ritmos. Ideal para fomentar el amor por la música desde una edad temprana. Recomendado para niños a partir de 3 años.",
     "img":"url"
-  },
-  {
-    "nombre": "Set de Superhéroes",
-    "precio": 27.99,
-    "edad_recomendada": 5,
-    "descripcion_corta": "Kit de superhéroes para jugar a salvar el mundo.",
-    "descripcion_larga": "Este set de superhéroes"
   }
 ]
