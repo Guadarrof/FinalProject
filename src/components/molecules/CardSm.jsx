@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from "./Counter";
 
 const CardSm = ({urlImg, imgDescription, price, title, description, moreInfo}) => {
   return (
@@ -10,6 +11,7 @@ const CardSm = ({urlImg, imgDescription, price, title, description, moreInfo}) =
             <p className="card__p">{description}</p>
             <a href={moreInfo} className="card__a">Mas informacion</a>
         </div>
+        <Counter/>
     </div>
   )
 }
