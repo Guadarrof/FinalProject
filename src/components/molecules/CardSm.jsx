@@ -2,7 +2,7 @@ import React from 'react'
 import Counter from "./Counter";
 import { Link } from 'react-router-dom';
 
-const CardSm = ({urlImg, imgDescription, price, title, description}) => {
+const CardSm = ({id, urlImg, imgDescription, price, title, description}) => {
   return (
     <div className="card card-m" id="product1">
         <img src={urlImg} alt={imgDescription} className="card_img"/>
@@ -10,7 +10,7 @@ const CardSm = ({urlImg, imgDescription, price, title, description}) => {
             <p className="card__price">{price}</p>
             <h3 className="card__h3">{title}</h3>
             <p className="card__p">{description}</p>
-            <Link to='/productInfo' className="card__a">Mas informacion</Link>
+            <Link to={`/productInfo/${id}`} className="card__a">Mas informacion</Link>
         </div>
         <Counter/>
     </div>

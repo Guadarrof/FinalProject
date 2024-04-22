@@ -7,6 +7,7 @@ const CardsContainer = () => {
     <div className="card_wrapper">
       {toys.map((toy) => (
         <CardSm
+          id={toy.id}
           key={toy.id}
           urlImg={toy.img}
           imgDescrption={toy.descripcion_corta}
