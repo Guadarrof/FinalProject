@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import toys from "../data/listaProductos.json"
+import Button from '../components/atoms/Button'
 
 const ProductInfo = () => {
  const { id } = useParams()
  const [toy, setToy] = useState({})
+ const  navigate = useNavigate()
 //  const [otherToy, setOtherToy] = useState({})
 
  useEffect(()=>{
@@ -19,6 +21,13 @@ const ProductInfo = () => {
 
   return (
     <>
+      <Button
+      aria-label="Back"
+      id="back-btn" 
+      className="btn btn_secondary btn-m" 
+      action={() => navigate(-1)}
+      label="Back"
+      />
       <div className="product_container">
             <div className="product_content">
                 <div className="product_img">
@@ -33,7 +42,11 @@ const ProductInfo = () => {
                     </div>
                 </div>
             </div>
-            <button className="btn btn_secondary btn-m">Comprar</button>
+            <Button
+            aria-label="Buy"
+            id="buy-btn" 
+            className="btn btn_secondary btn-m" 
+            label="Comprar"/>
         </div>
     </>
   )
