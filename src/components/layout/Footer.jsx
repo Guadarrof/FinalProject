@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Icon from '../molecules/Icon';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -6,24 +8,24 @@ const Footer = () => {
         <div className="footer_content">
             <div className="footer_div footer_div-logo">
                 <Icon className="footer__logo"></Icon>
-                <p className="footer__p">Avenida 60 Num 546, <br>La Plata, Buenos Aires, Argentina</p>
+                <p className="footer__p">Avenida 60 Num 546, <br>La Plata, Buenos Aires, Argentina</br></p>
             </div>
             <div className="footer_div">
                 <h3 className="footer_h3">Compras</h3>
-                <a href="#" className="footer__a">Medios de pago</a><br>
-                <a href="#" className="footer__a">Reclamos</a><br>
-                <a href="#" className="footer__a">Terminos y condiciones</a>
+                <Link to="/questions" className="footer__a">Medios de pago</Link>
+                <Link to="/contact" className="footer__a">Reclamos</Link>
+                <Link to="/questions" className="footer__a">Terminos y condiciones</Link>
             </div>
             <div className="footer_div">
                 <h3 className="footer_h3">Nosotros</h3>
-                <a href="#" className="footer__a">Nuestra Marca</a><br>
-                <a href="#" className="footer__a">Nuestro Equipo</a><br>
-                <a href="#" className="footer__a">Unite al grupo</a><br>
+                <Link to="/about" className="footer__a">Nuestra Marca</Link>
+                <Link to="/about" className="footer__a">Nuestro Equipo</Link>
+                <Link to="/questions" className="footer__a">Unite al grupo</Link>
             </div>
             <div className="footer_div">
                 <h3 className="footer_h3">Contacto</h3>
                 <div className="footer_email">
-                    <span className="footer__span footer__span-email"></span>
+                    <Icon className="footer__span footer__span-email"></Icon>
                     <a href="https://outlook.live.com" class="footer__a">juegueteriaCosmica@outlook.com</a>
                 </div>
                 <div className="footer_phone">
