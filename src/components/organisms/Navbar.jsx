@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "../molecules/SearchBar";
 import toys from "../../data/listaProductos.json";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -17,18 +18,15 @@ const Navbar = () => {
   return (
     <div className="navBar">
       <SearchBar action={(e) => setSearch(e.target.value)} />
-      {search !== "" ? (
-        foundToy.length > 0 ? (
+      {search !== "" && (foundToy.length > 0 ? (
           foundToy.map((toy) => (
             <div className="search_result" key={toy.id}>
-              <p className="search-result">{toy.nombre}</p>
+              <Link to={`productInfo/${toy.id}`} className="search_result">{toy.nombre}</Link>
             </div>
           ))
         ) : (
           <p className="search-error">No se encontraron resultados</p>
         )
-      ) : (
-        <p className="search-error">Realiza una búsqueda</p>
       )}
     </div>
   );

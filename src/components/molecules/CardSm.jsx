@@ -10,7 +10,7 @@ const CardSm = ({id, urlImg, imgDescription, price, title, description}) => {
             <p className="card__price">{price}</p>
             <h3 className="card__h3">{title}</h3>
             <p className="card__p">{description}</p>
-            <Link to={`/productInfo/${id}`} className="card__a">Mas informacion</Link>
+            <Link to={`products/productInfo/${id}`} className="card__a">Mas informacion</Link>
         </div>
         <Counter/>
     </div>
