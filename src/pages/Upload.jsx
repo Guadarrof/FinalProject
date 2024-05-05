@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
 
 const Upload = () => {
   return (
-    <div>Upload</div>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+      </main>
+      <Footer/>
+    </>
   )
 }
 
