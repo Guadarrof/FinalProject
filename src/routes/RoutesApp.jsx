@@ -25,9 +25,9 @@ const RoutesApp = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/faq">
-          <Route path="/returns" element={<Contact/>}/>
-          <Route path="/questions" element={<Questions/>}/>
-          <Route path="/jobs" element={<Contact/>}/>
+          <Route path="returns" element={<Contact/>}/>
+          <Route path="questions" element={<Questions/>}/>
+          <Route path="jobs" element={<Contact/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
