@@ -1,12 +1,18 @@
 import React from "react";
-import Navbar from "../components/organisms/Navbar";
+import Navbar from "../components/layout/Navbar";
+import Banner from "../components/layout/Banner"
 
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <Banner/>
+      </main>
     </>
   );
 };
 
-export default Home
+export default Home;

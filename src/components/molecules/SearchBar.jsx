@@ -11,6 +11,7 @@ const SearchBar = ({action}) => {
     error=""
     placeholder="Buscar juguete"
     id="search_bar"
+    className="searchbar"
     />
       
     </>

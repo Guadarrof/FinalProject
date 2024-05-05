@@ -1,8 +1,8 @@
 import React from 'react'
 
-const InputGroup = ({type, value, onChange, label, error, id, placeholder}) => {
+const InputGroup = ({type, value, onChange, label, error, id, placeholder, className}) => {
   return (
-    <div className='input_group'>
+    <div className={className}>
     <label htmlFor={id} hidden>{label}</label>
     <input type={type} value={value} onChange={onChange} id={id} placeholder={placeholder} />
     <p className='p-error'>{error}</p>
