@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import toys from "../../data/listaProductos.json"
-import Button from '../atoms/Button'
+import toys from "../data/listaProductos.json"
+import Button from '../components/atoms/Button'
 
 const ProductInfo = () => {
  const { id } = useParams()
  const [toy, setToy] = useState({})
  const  navigate = useNavigate()
-//  const [otherToy, setOtherToy] = useState({})
 
  useEffect(()=>{
   const toyInfo = toys.find(data => data.id === parseInt(id))
   setToy(toyInfo);
  },[id])
 
-//  useEffect(()=>{
-//     const moreToys = toys.find(data => data.id !== parseInt(id))
-//     setOtherToy(moreToys);
-//    },[id])
 
   return (
     <>

@@ -1,20 +1,20 @@
 import React from "react";
-import toys from "../../data/listaProductos.json";
 import CardSm from "../molecules/CardSm";
 
-const CardsContainer = () => {
+const CardsContainer = ({ items, routePrefix}) => {
   return (
     <div className="card_wrapper">
-      {toys.map((toy) => (
+      {items.map((item) => (
         <CardSm
-          id={toy.id}
-          key={toy.id}
-          urlImg={toy.img}
-          imgDescrption={toy.descripcion_corta}
-          price={toy.precio}
-          title={toy.nombre}
-          description={toy.descripcion_larga}
+          id={item.id}
+          key={item.id}
+          urlImg={item.img}
+          imgDescrption={item.descripcion_corta}
+          price={item.precio}
+          title={item.nombre}
+          description={item.descripcion_larga}
           moreInfo=""
+          routePrefix={routePrefix}
         />
       ))}
     </div>

@@ -11,7 +11,7 @@ const Footer = () => {
           <Icon className="footer__logo"></Icon>
           <Text
             renderAs="p"
-            content="Avenida 60 Num 546, <br/>La Plata, Buenos Aires, Argentina"
+            content="Avenida 60 Num 546, La Plata, Buenos Aires, Argentina"
             className="footer__p"
           />
         </div>
