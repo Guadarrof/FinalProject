@@ -10,9 +10,10 @@ const SearchBar = ({action}) => {
     onChange={action}
     error=""
     placeholder="Buscar juguete"
-    id="search_bar"
+    id="searchBar"
     className="searchbar"
     hidden={true}
+    name="searchBar"
     />
       
     </>

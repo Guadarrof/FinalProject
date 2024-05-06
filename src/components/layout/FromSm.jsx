@@ -1,44 +1,68 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Text from '../atoms/Text'
 import InputGroup from '../molecules/InputGroup'
 import Button from '../atoms/Button'
 
-const FromSm = ({nameError, emailError, msjeError, onChange, submitBtn, formTitle}) => {
-  return (
+const FromSm = ({nameError, emailError, msjeError, formTitle}) => {
+  
+    const [form, setForm]=useState({
+        contactName:'',
+        contactEmail: '',
+        contactMessage:''
+    })
+
+    const handleInputChange = ({target}) => {
+        setForm({
+            ...form,
+            [target.name]: target.value
+        });
+    };
+    
+    const handleSubmit = e =>{
+        e.prevent.default()
+    }
+  
+    return (
     <div className="form_container">
             <form action="submit" className="form">
-                <div class="form_content">
+                <div className="form_content">
                     <Text
                         renderAs="h2"
                         content={formTitle}
                         className='form_h2'
                     />
                     <InputGroup
+                        id="contactName"
+                        name="contactName"
                         type="text"
-                        onChange={onChange}
+                        onChange={handleInputChange}
                         label="Nombre"
                         error={nameError}
-                        id="nameContact"
                         placeholder='Nombre'
                         className="contact_name"
+                        value={form.contactName}
                     />
                     <InputGroup
+                        id="contactEmail"
+                        name="contactEmail"
                         type="email"
-                        onChange={onChange}
+                        onChange={handleInputChange}
                         label="email"
                         error={emailError}
-                        id="emailContact"
                         placeholder='email'
                         className="contact_email"
+                        value={form.contactEmail}
                     />
                     <InputGroup
+                        id="contactMessage"
+                        name="contactMessage"
                         type="text"
-                        onChange={onChange}
+                        onChange={handleInputChange}
                         label="Deja tu mensaje"
                         error={msjeError}
-                        id="msjeContact"
                         placeholder='Mensaje'
-                        className="contact_msje"
+                        className="contact_message"
+                        value={form.contactMessage}
                     />
                 </div>
                 <div className="form_button-contact">
@@ -46,7 +70,7 @@ const FromSm = ({nameError, emailError, msjeError, onChange, submitBtn, formTitl
                         className="btn btn-s btn_primary-inverse" 
                         id="btnContact"
                         label="Enviar"
-                        action = {submitBtn}
+                        action = {handleSubmit}
                         type = "button"
                         disabled={false}
                         ariaLabel="Enviar"
