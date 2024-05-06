@@ -1,4 +1,7 @@
 import React from 'react'
+import Text from '../atoms/Text'
+import InputGroup from '../molecules/InputGroup'
+import Button from '../atoms/Button'
 
 const FromSm = ({nameError, emailError, msjeError, onChange, submitBtn, formTitle}) => {
   return (

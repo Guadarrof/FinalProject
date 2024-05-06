@@ -17,25 +17,25 @@ const Footer = () => {
         </div>
         <div className="footer_div">
           <Text renderAs="h3" content="Compras" className="footer_h3" />
-          <Link to="/questions" className="footer__a">
+          <Link to="/faq/questions" className="footer__a">
             Medios de pago
           </Link>
-          <Link to="/contact" className="footer__a">
-            Reclamos
+          <Link to="/faq/returns" className="footer__a">
+            Devoluciones y envios
           </Link>
-          <Link to="/questions" className="footer__a">
-            Terminos y condiciones
+          <Link to="/faq" className="footer__a">
+            FAQ
           </Link>
         </div>
         <div className="footer_div">
           <Text renderAs="h3" content="Nosotros" className="footer_h3" />
-          <Link to="/about" className="footer__a">
-            Nuestra Marca
+          <Link to="/faq/contact" className="footer__a">
+            Contactanos
           </Link>
           <Link to="/about" className="footer__a">
             Nuestro Equipo
           </Link>
-          <Link to="/questions" className="footer__a">
+          <Link to="/faq/questions" className="footer__a">
             Unite al grupo
           </Link>
         </div>

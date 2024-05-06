@@ -1,5 +1,5 @@
 import React from 'react'
-import InputGroup from '../molecules/InputGroup'
+import InputGroup from './InputGroup'
 
 const SearchBar = ({action}) => {
   return (
