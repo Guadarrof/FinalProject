@@ -9,12 +9,14 @@ import Products from "../pages/Products";
 import Cart from "../pages/Cart";
 import Questions from "../components/organisms/Questions"
 import Faq from "../pages/Faq"
-
+import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
 
 
 const RoutesApp = () => {
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/products" element={<Products />}/>
@@ -29,6 +31,7 @@ const RoutesApp = () => {
           <Route path="jobs" element={<Contact/>}/>
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };

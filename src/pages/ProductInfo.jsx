@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import toys from "../data/listaProductos.json"
 import Button from '../components/atoms/Button'
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
 
 const ProductInfo = () => {
  const { id } = useParams()
