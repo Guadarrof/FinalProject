@@ -1,5 +1,5 @@
 import React from 'react'
-import InputGroup from '../atoms/InputGroup'
+import InputGroup from '../molecules/InputGroup'
 
 const SearchBar = ({action}) => {
   return (
@@ -12,6 +12,7 @@ const SearchBar = ({action}) => {
     placeholder="Buscar juguete"
     id="search_bar"
     className="searchbar"
+    hidden={true}
     />
       
     </>
