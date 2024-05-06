@@ -5,12 +5,8 @@ import Footer from '../components/layout/Footer';
 const Cart = () => {
   return (
     <>
-    <header>
-      <Navbar />
-    </header>
     <main>
     </main>
-    <Footer/>
   </>
   )
 }

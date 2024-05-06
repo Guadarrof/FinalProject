@@ -6,9 +6,6 @@ import FromSm from '../components/layout/FromSm';
 const Faq = () => {
   return (
     <>
-      <header>
-        <Navbar/>
-      </header>
       <main>
         <FromSm
         formTitle="Contactanos"
@@ -19,7 +16,6 @@ const Faq = () => {
         submitBtn
         />
       </main>
-      <Footer/>
     </>
   )
 }

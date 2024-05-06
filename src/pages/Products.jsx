@@ -8,13 +8,9 @@ const Products = () => {
   return (
     <>
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <CardsContainer items={toys} routePrefix={`/productInfo`}/>
       </main>
-      <Footer/>
     </>
    
     </>

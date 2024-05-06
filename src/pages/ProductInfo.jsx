@@ -18,7 +18,6 @@ const ProductInfo = () => {
 
   return (
     <>
-    <Navbar/>
       <Button
       aria-label="Back"
       id="back-btn" 
@@ -46,8 +45,6 @@ const ProductInfo = () => {
             className="btn btn_secondary btn-m" 
             label="Comprar"/>
         </div>
-
-    <Footer/>
     </>
   )
 }

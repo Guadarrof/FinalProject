@@ -8,15 +8,11 @@ import OfferBanner from "../components/organisms/OfferBanner";
 const Home = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <MainBanner/>
         <SelectedBanner/>
         <OfferBanner/>
       </main>
-      <Footer/>
     </>
   );
 };

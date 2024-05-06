@@ -7,10 +7,6 @@ import Icon from "../components/molecules/Icon";
 const AboutUs = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-      <main>
         <main>
           <div className="about_container">
             <div className="about_img">
@@ -58,8 +54,6 @@ const AboutUs = () => {
             </div>
           </div>
         </main>
-      </main>
-      <Footer />
     </>
   );
 };
