@@ -47,7 +47,7 @@
     }
 }
 
-.search_input{
+.search_group{
     display: flex;
     align-items: center;
     @media screen and (max-width: $breakpoint-m) {
@@ -55,7 +55,7 @@
     }
 }
 
-.searchbar{
+#searchBar{
     height: 30px;
     width: 200px;
     border: 2px solid $primary-color;
