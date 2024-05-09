@@ -14,7 +14,7 @@
     z-index: 1;
     &_logo{
         height: 45px;
-        content: url(/Images/Logo.png);
+        content: url(../../Images/Logo.png);
     }
     &_pages{
         font-size: $font-size-base;
