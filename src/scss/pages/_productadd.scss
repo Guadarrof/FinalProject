@@ -1,0 +1,33 @@
+@use './index';
+
+
+.age_group{
+    margin-top: $margin-m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: $margin-s;
+    &-inputs{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    label{
+        margin-top: $margin-s;
+    }
+    input{
+        height: 30px;
+    }
+}
+
+.checkbox-group{
+    margin: $margin-s;
+    margin-top: $margin-m;
+}
+
+.form_button-add{
+    margin: auto;
+    margin-top: $margin-m;
+    display: flex;
+    justify-content: center;
+}

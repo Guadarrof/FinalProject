@@ -1,0 +1,24 @@
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/helpers';
+@import 'utils/breakpoints';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/grid';
+@import 'layout/forms';
+
+@import 'components/banners';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/footer';
+@import 'components/navbar';
+@import 'components/inputs';
+
+@import 'pages/aboutus';
+@import 'pages/contact';
+@import 'pages/home';
+@import 'pages/productadd';
+@import 'pages/moreInfo';

@@ -1,0 +1,157 @@
+@use './index';
+
+.banner{
+    width: 100vw;
+    height: 50%;
+    &-1{
+        flex-direction: row;
+        background: linear-gradient(180deg, $primary-color, $white);
+        margin-top: 58px;
+        padding-top: $padding-l;
+    }
+
+    &_img{
+       height: auto;
+       width: 35%;
+       margin: auto;
+       @media screen and (max-width: $breakpoint-s) {
+        display: none;
+      }
+    }
+
+    &_container-text{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    &__h1{
+        font-family: $cool-font;
+        font-size: $font-size-xxl;
+        color: $success-color;
+        text-shadow: $light-shadow;
+        @media screen and (max-width: $breakpoint-l) {
+            font-size: $font-size-xl;    
+        } 
+    }
+    &__p{
+        background-color: $light-color;
+        font-size: $font-size-m;
+        padding: $base-padding;
+        box-shadow: $base-shadow;
+        width: 75%;
+        @media screen and (max-width: $breakpoint-l) {
+            font-size: $font-size-base;    
+        }
+        @media screen and (max-width: $breakpoint-m) {
+            margin-top: $margin-m;
+            margin-bottom: $margin-m;  
+        }
+        @media screen and (max-width: $breakpoint-s) {
+            display: none;
+        }
+    }
+    &-2{
+        background: linear-gradient(360deg, $success-color, $white);
+        padding-bottom: $padding-l;
+        margin-top: $margin-l;
+        display: flex;
+        flex-direction: column;
+        .offer{
+            &_container{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: $base-margin 20%;
+                @media screen and (max-width: $breakpoint-l) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            &_group{
+                height: 500;
+                width: 460;
+                box-shadow: none;
+            }
+            &_h2{
+                font-family: $secondary-font;
+                color: $secondary-color;
+                margin-left: $margin-xl;
+                padding-top: 2.5rem;
+                font-size: $font-size-l;
+                width: fit-content;
+                @include underline-pink;
+                padding-bottom: 10px;
+                @media screen and (max-width: $breakpoint-s) {
+                    margin: auto;
+                }
+            }
+            &__img{
+                position: absolute;
+                &-1{
+                    width: 286px;
+                    height: 340px;
+                    left: 5px;
+                    top: 40px;
+                }
+                &-2{
+                    width: 299px;
+                    height: 267px;
+                    left: -20px;
+                    top: 95px;
+                }
+                &-3{
+                    width: 300px;
+                    height: 321px;
+                    left: -25px;
+                    top: 55px;
+                }
+            }
+            &__p{
+                font-size: $font-size-m;
+                font-weight: 600;
+                font-variant: small-caps;
+                text-align: center;
+                @media screen and (max-width: $breakpoint-s) {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-right: $margin-m;
+                }
+            }
+        }
+        .img{
+            &-group{
+            position: relative;
+            height: 438px;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: $margin-m;
+            margin-bottom: 0;
+            @media screen and (max-width: $breakpoint-s) {
+                display: none;
+            }
+            }
+            &-background{
+                border-radius: 20px;
+                box-shadow: $base-shadow;
+                height: 350px;
+                width: 200px;
+                &-1{
+                    background-color: $highlight-color;
+                }
+                &-2{
+                    background-color: $primary-color;
+                }
+                &-3{
+                    background-color: $tertiary-color;
+                }
+            }
+        }
+    }
+}
