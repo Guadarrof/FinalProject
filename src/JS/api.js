@@ -20,7 +20,7 @@ export const getToys = async () => {
 }
 
 export const postMessage = async body => {
-    const resp = await axiosInstance.post("/messages", body)
+    const resp = await axiosInstance.post("/message", body)
     return resp.data;
 } 
 
