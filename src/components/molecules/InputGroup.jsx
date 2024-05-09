@@ -10,12 +10,13 @@ const InputGroup = ({
       placeholder, 
       className, 
       hidden=false,
-      name
+      onBlur,
+      nameValue
   }) => {
   return (
     <div className={className}>
     <label htmlFor={id} hidden={hidden}>{label}</label>
-    <input type={type} value={value} onChange={onChange} id={id} name={name} placeholder={placeholder} />
+    <input type={type} value={value} onChange={onChange} onBlur= {onBlur} id={id} name={nameValue} placeholder={placeholder} />
     <p className='input_error'>{error}</p>
     </div>
   )
