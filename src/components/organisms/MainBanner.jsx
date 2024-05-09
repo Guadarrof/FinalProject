@@ -1,11 +1,12 @@
 import React from 'react';
 import Text from '../atoms/Text'
 import { Link } from 'react-router-dom';
+import duckImage from '../../Images/duck.png';
 
 const MainBanner = () => {
   return (
     <div className="section-banner banner-1">
-            <img src="../Images/duck.png" alt="imagen de patito de goma" className="banner_img"/>
+            <img src={duckImage} alt="imagen de patito de goma" className="banner_img"/>
             <div className="banner_container-text">
               <Text
                 renderAs="h1"

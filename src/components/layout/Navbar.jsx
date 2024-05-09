@@ -3,6 +3,7 @@ import SearchBar from "../molecules/SearchBar";
 import toys from "../../data/listaProductos.json";
 import { Link } from "react-router-dom";
 import Icon from "../molecules/Icon";
+import Cart from "../organisms/Cart";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -27,7 +28,7 @@ const Navbar = () => {
           <Link to="upload" className="navbar__a">Add products</Link>
       </div>
       <div className="navbar_icons">
-      <Icon className="navbar__span-cart"></Icon>
+      <Cart/>
       <SearchBar action={(e) => setSearch(e.target.value)} />
       {search !== "" &&
         (foundToy.length > 0 ? (

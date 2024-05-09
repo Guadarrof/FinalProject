@@ -6,7 +6,7 @@ import AboutUs from "../pages/AboutUs";
 import Upload from "../pages/Upload";
 import Contact from "../components/layout/Contact";
 import Products from "../pages/Products";
-import Cart from "../pages/Cart";
+import Cart from "../components/organisms/Cart";
 import Questions from "../components/organisms/Questions"
 import Faq from "../pages/Faq"
 import Navbar from '../components/layout/Navbar'

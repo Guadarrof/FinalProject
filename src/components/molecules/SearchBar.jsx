@@ -11,7 +11,7 @@ const SearchBar = ({action}) => {
     error=""
     placeholder="Buscar juguete"
     id="searchBar"
-    className="searchbar"
+    className="search_group"
     hidden={true}
     name="searchBar"
     />
