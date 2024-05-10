@@ -5,13 +5,17 @@ import { CartContext } from '../../context/CartContext'
 const Cart = () => {
     const {toysCart} = useContext(CartContext)
   return (
-    <button>
-        <Icon className='navbar__span-cart'/>
-        {toysCart.reduce(
-          (acc, toy)=> acc + toy.quantity,
-          0
-        )}
-    </button>
+    <div className='navbar__cart-container'>
+      <button className='navbar__cart-btn'>
+          <Icon className='navbar__cart-span'/>
+      </button>
+      <div className='navbar__cart-badge'>
+          {toysCart.reduce(
+            (acc, toy)=> acc + toy.quantity,
+            0
+          )}
+      </div>
+    </ div>
   )
 }
 

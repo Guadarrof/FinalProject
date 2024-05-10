@@ -30,7 +30,7 @@ const CartProvider = ({children}) => {
         )
       )
     }else{
-      setToysCart([toysCart.filter(toy => toy.id !== id)])
+      setToysCart(toysCart.filter(toy => toy.id !== id))
     }
   }
 
