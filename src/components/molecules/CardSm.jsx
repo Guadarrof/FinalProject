@@ -12,7 +12,7 @@ const CardSm = ({routePrefix, urlImg, imgDescription, price, title, description,
             <p className="card__p">{description}</p>
             <Link to={`${routePrefix}/${id}`} className="card__a">Mas informacion</Link>
         </div>
-        <Counter/>
+        <Counter id={id}/>
     </div>
   )
 }

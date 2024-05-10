@@ -4,10 +4,13 @@ import { CartContext } from '../../context/CartContext'
 
 const Cart = () => {
     const {toysCart} = useContext(CartContext)
-    console.log(toysCart)
   return (
     <button>
-        <Icon className='navbar__span-cart' />
+        <Icon className='navbar__span-cart'/>
+        {toysCart.reduce(
+          (acc, toy)=> acc + toy.quantity,
+          0
+        )}
     </button>
   )
 }

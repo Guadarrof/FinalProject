@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import toys from "../data/listaProductos.json"
 import Button from '../components/atoms/Button'
+import Counter from '../components/molecules/Counter'
+
+
 
 const ProductInfo = () => {
  const { id } = useParams()
@@ -37,11 +40,12 @@ const ProductInfo = () => {
                     </div>
                 </div>
             </div>
+            <Counter id={id}/>
             <Button
             aria-label="Buy"
             id="buy-btn" 
             className="btn btn_secondary btn-m" 
-            label="Comprar"/>
+            label="Pagar"/>
         </div>
     </>
   )
