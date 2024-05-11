@@ -21,9 +21,7 @@
         width: 435px;
         display: flex;
         justify-content: center;
-        img{
-            height: 100%;
-        }
+        @include  symetricImage;
     }
     &_content{
     display: flex;

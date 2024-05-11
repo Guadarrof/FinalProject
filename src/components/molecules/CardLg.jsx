@@ -39,7 +39,7 @@ const CardLg = () => {
          <div className="product_container">
                <div className="product_content">
                    <div className="product_img">
-                       <img src={product.img} alt=""/>
+                       <img src={product.img} alt={product.imgAlt}/>
                    </div>
                    <div className="product_card">
                        <div className="product_div product_div-info">
