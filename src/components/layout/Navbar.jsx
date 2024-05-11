@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to={`/`}>
-        <Icon className="logo_nav"/>
+        <Icon className="navbar_logo"/>
       </Link>
       <div className="navbar_pages">
           <Link to="/about" className="navbar__a">About us</Link>

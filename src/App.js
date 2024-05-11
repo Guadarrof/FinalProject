@@ -1,10 +1,13 @@
 import React from "react";
 import RoutesApp from "./routes/RoutesApp";
+import CartProvider from "./context/CartProvider";
 
 function App() {
   return (
     <div className="App">
-      <RoutesApp/>
+      <CartProvider>
+        <RoutesApp/>
+      </CartProvider>
     </div>
   );
 }
