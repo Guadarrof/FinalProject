@@ -40,6 +40,8 @@
     &__cart{
         &-btn{
             border: none;
+            height: 58px;
+            background-color: $white;
         }
         &-span{
         content: url(../../Images/shopIcon.svg);

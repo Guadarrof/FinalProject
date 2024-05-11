@@ -54,7 +54,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar_icons">
-        <Cart />
         <SearchBar action={(e) => setSearch(e.target.value)} />
         {showDropdown && (
           <div className="search_result" ref={dropdownRef}>
@@ -75,6 +74,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <Cart />
     </div>
   );
 };

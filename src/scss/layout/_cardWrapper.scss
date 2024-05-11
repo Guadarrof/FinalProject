@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: $base-margin 18%;
+    margin: $base-margin 15%;
     @media screen and (max-width: $breakpoint-xl) {
         margin: $base-margin 15%;      
     }
@@ -15,5 +15,22 @@
     }
     @media screen and (max-width: $breakpoint-s) {
         margin: $base-margin 10%;      
+    }
+    &-lg{
+        flex-wrap: wrap;
+    }
+    &-sm{
+        flex-wrap: nowrap;
+    }
+}
+
+.card {
+    width: calc(33.33% - 10px); 
+    margin-bottom: 20px;
+    @media screen and (max-width: $breakpoint-m) {
+        width: calc(50% - 10px);
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        width: calc(100% - 10px);
     }
 }
