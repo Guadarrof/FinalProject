@@ -1,26 +1,26 @@
 import React from "react";
-import toys from "../../data/listaProductos.json";
 import CardsContainer from "../layout/CardsContainer";
 import Text from "../atoms/Text";
 import { useEffect, useState } from "react";
+import { getProducts } from "../../util/api";
 
 const SelectedBanner = () => {
   const [todayToys, setTodayToys] = useState([]);
 
   useEffect(() => {
-    const fetchRandomToys = async () => {
-      const randomToys = [];
-      while (randomToys.length < 3) {
-        const randomIndex = Math.floor(Math.random() * toys.length);
-        const selectedToy = toys[randomIndex];
-        randomToys.push(selectedToy);
-      }
-      setTodayToys(randomToys);
-    };
-
-    fetchRandomToys();
+    getProducts()
+      .then((data) => {
+        const randomToys = [];
+        while (randomToys.length < 3) {
+          const randomIndex = Math.floor(Math.random() * data.length);
+          const selectedToy = data[randomIndex];
+          randomToys.push(selectedToy);
+        }
+        setTodayToys(randomToys);
+      })
+      .catch((error) => console.error(error));
   }, []);
-
+  
   return (
     <div>
       <Text

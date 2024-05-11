@@ -1,25 +1,29 @@
-import React, { useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import SearchBar from "../molecules/SearchBar";
-import toys from "../../data/listaProductos.json";
 import { Link } from "react-router-dom";
 import Icon from "../molecules/Icon";
 import Cart from "../organisms/Cart";
+import { getProducts } from "../../util/api";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
-  const [foundToy, setFoundToy] = useState(toys);
+  const [foundToy, setFoundToy] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchError, setSearchError] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    const lowercaseSearch = search.toLowerCase();
-    const filteredToys = toys.filter((product) =>
-      product.nombre.toLowerCase().includes(lowercaseSearch)
-    );
-    setFoundToy(filteredToys);
-    setShowDropdown(search !== "" && filteredToys.length > 0);
-    setSearchError(lowercaseSearch !== "" && filteredToys.length === 0);
+    getProducts()
+      .then((data) => {
+        const lowercaseSearch = search.toLowerCase();
+        const filteredToys = data.filter((product) =>
+          product.productName.toLowerCase().includes(lowercaseSearch)
+        );
+        setFoundToy(filteredToys);
+        setShowDropdown(search !== "" && filteredToys.length > 0);
+        setSearchError(lowercaseSearch !== "" && filteredToys.length === 0);
+      })
+      .catch((error) => console.error(error));
   }, [search]);
 
   useEffect(() => {
@@ -34,8 +38,6 @@ const Navbar = () => {
       setShowDropdown(false);
     }
   };
-
-
 
   return (
     <div className="navbar">
@@ -63,7 +65,7 @@ const Navbar = () => {
                 to={`productInfo/${toy.id}`}
                 className="search_result-item"
               >
-                {toy.nombre}
+                {toy.productName}
               </Link>
             ))}
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import CardSm from "../molecules/CardSm";
 
 const CardsContainer = ({ items, routePrefix}) => {
+  console.log("Items:", items);
   const cardWrapperClass = items.length < 3 ? "card_wrapper-sm" : "card_wrapper-lg";
 
   return (
@@ -11,10 +12,10 @@ const CardsContainer = ({ items, routePrefix}) => {
           id={item.id}
           key={item.id}
           urlImg={item.img}
-          imgDescrption={item.descripcion_corta}
-          price={item.precio}
-          title={item.nombre}
-          description={item.descripcion_larga}
+          imgDescription={item.imgAlt}
+          price={item.price}
+          title={item.productName}
+          description={item.shortDescription}
           moreInfo=""
           routePrefix={routePrefix}
         />

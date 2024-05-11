@@ -14,7 +14,7 @@ axios.interceptors.request.use(
     }
 )
 
-export const getToys = async () => {
+export const getProducts = async () => {
     const resp = await axiosInstance.get("/products")
     return resp.data;
 }
