@@ -100,7 +100,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    text-align: end;
     border-radius: 9px/9px;
     @media screen and (max-width: $breakpoint-m) {
         display: none;
