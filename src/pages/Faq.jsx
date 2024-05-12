@@ -1,5 +1,5 @@
 import React from 'react';
-import FormSm from '../components/layout/FormSm';
+import FormSm from '../components/organisms/FormSm';
 
 const Faq = () => {
   return (
@@ -7,11 +7,6 @@ const Faq = () => {
       <main>
         <FormSm
         formTitle="Contactanos"
-        nameError
-        emailError
-        msjeError
-        onChange
-        submitBtn
         />
       </main>
     </>
