@@ -1,19 +1,20 @@
 import React from 'react'
 import InputGroup from './InputGroup'
 
-const SearchBar = ({action}) => {
+const SearchBar = ({action, values}) => {
   return (
     <>
     <InputGroup
     label="buscar"
-    type="text"
+    inputType="text"
     onChange={action}
     error=""
     placeholder="Buscar juguete"
     id="searchBar"
     className="search_group"
     hidden={true}
-    name="searchBar"
+    nameValue="searchBar"
+    values={values}
     />
       
     </>

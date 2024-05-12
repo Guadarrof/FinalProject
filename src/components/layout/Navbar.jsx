@@ -48,7 +48,7 @@ const Navbar = () => {
         <Link to="/about" className="navbar__a">
           About us
         </Link>
-        <Link to="/contact" className="navbar__a">
+        <Link to="faq/contact" className="navbar__a">
           Contact
         </Link>
         <Link to="upload" className="navbar__a">
@@ -56,7 +56,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar_icons">
-        <SearchBar action={(e) => setSearch(e.target.value)} />
+        <SearchBar action={(e) => setSearch(e.target.value)} values={search} />
         {showDropdown && (
           <div className="search_result" ref={dropdownRef}>
             {foundToy.map((toy) => (
@@ -72,7 +72,7 @@ const Navbar = () => {
         )}
         {searchError && (
           <div className="search_result">
-            <p className="search_result-error">No se encontraron resultados</p>
+            <p className="search_result-item">No se encontraron resultados</p>
           </div>
         )}
       </div>
