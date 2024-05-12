@@ -7,7 +7,7 @@ const CardSm = ({
   urlImg,
   imgDescription,
   price,
-  title,
+  productName,
   description,
   id,
 }) => {
@@ -16,10 +16,17 @@ const CardSm = ({
       <img src={urlImg} alt={imgDescription} className="card_img" />
       <Link to={`${routePrefix}/${id}`} className="card_text">
         <p className="card__price">{price}</p>
-        <h3 className="card__h3">{title}</h3>
+        <h3 className="card__h3">{productName}</h3>
         <p className="card__p">{description}</p>
       </Link>
-      <Counter id={id} />
+      <Counter 
+      id={id} 
+      productData={{
+        productName, 
+        urlImg,
+        price
+      }}
+      />
     </div>
   );
 };

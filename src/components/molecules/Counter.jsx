@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../atoms/Button'
 import Text from '../atoms/Text'
 import { useState, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 
-const INITIAL_STATE=0;
 
-const Counter = ({id}) => {
-  const [count, setCount] = useState(INITIAL_STATE)
-  const { addToys, removeToys} = useContext(CartContext)
+const Counter = ({id, productData, initialValue=0 }) => {
+  const [count, setCount] = useState(initialValue)
+  const { addToys, removeToys, toysCart } = useContext(CartContext)
 
+  useEffect(() => {
+    const toys = toysCart.find (toy => toy.id === id)
+        setCount(toys?.quantity || 0)
+    }, [toysCart, id])
 
-  const increment = ()=>{
+  const increment = (e)=>{
+    e.stopPropagation()
     setCount (count+1);
     addToys({
       id,
+      productData,
       quantity: count + 1
     })
   }
-  const decrement = ()=>{
-    if(count> 0) setCount(count-1)
-      removeToys(id);
-  }
+  const decrement = (e)=>{
+    e.stopPropagation()
+    if(count> 0) setCount(count - 1);
+    removeToys(id);
+}
 
   return (
     <div className='counter-container'>

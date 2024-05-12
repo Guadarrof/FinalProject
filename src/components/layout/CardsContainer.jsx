@@ -14,7 +14,7 @@ const CardsContainer = ({ items, routePrefix}) => {
           urlImg={item.img}
           imgDescription={item.imgAlt}
           price={item.price}
-          title={item.productName}
+          productName={item.productName}
           description={item.shortDescription}
           moreInfo=""
           routePrefix={routePrefix}

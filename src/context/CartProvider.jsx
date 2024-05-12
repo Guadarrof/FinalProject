@@ -3,8 +3,6 @@ import { CartContext } from './CartContext'
 
 const CartProvider = ({children}) => {
   const [toysCart, setToysCart] = useState([])
-  console.log(toysCart)
-  
   const addToys = data => {
       const toyFound = toysCart.find(toy => toy.id === data.id)
       if (toyFound){
