@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import Icon from "../molecules/Icon";
 import { CartContext } from "../../context/CartContext";
+import Modal from "./Modal";
 
 const Cart = () => {
   const { toysCart } = useContext(CartContext);
   return (
+    <>
     <div className="navbar__cart-container">
       <button className="navbar__cart-btn">
         <Icon className="navbar__cart-span" />
@@ -15,6 +17,8 @@ const Cart = () => {
         </div>
       }
     </div>
+    <Modal/>
+    </>
   );
 };
 

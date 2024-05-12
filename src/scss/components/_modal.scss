@@ -1,0 +1,19 @@
+.modal{
+    &_overlay{
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        backdrop-filter: contrast(0.5);
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &_container{
+        height: 30%;
+        width: 30%;
+        background-color: $white;
+    }
+}
