@@ -1,19 +1,53 @@
-.modal{
-    &_overlay{
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        z-index: 1;
-        backdrop-filter: contrast(0.5);
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
+.modal {
+  &_overlay {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    backdrop-filter: contrast(0.5);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &_container {
+    height: 35rem;
+    width: 30rem;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    &-header {
+      display: flex;
+      width: 100%;
+      justify-content: end;
     }
-    &_container{
-        height: 30%;
-        width: 30%;
-        background-color: $white;
-    }
+  }
+  &__cart{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+.cart__empty{
+  &-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+  &-logo{
+    content: url(../../Images/emptyCart.png);
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+#btnClose {
+  margin: 1rem;
 }
