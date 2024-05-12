@@ -17,6 +17,9 @@
     background-color: $white;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: none;
+    padding: 15px;
     &-header {
       display: flex;
       width: 100%;
@@ -29,6 +32,16 @@
     height: 50px;
     align-items: center;
     border-bottom: 2px solid $primary-color;
+    justify-content: space-between;
+  }
+}
+.cart{
+  &__title{
+  width: 50%;
+  }
+  &__price{
+    font-family: $tertiary-font;
+        color: $alert-color;
   }
 }
 

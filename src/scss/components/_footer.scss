@@ -30,13 +30,33 @@ footer{
             align-items: center;
             text-align: center;
             margin-right: $margin-l;
-            @media screen and (max-width: $breakpoint-m) {
+            @media screen and (max-width: $breakpoint-s) {
                 display: none;
             }  
         }
         &-social{
             display: flex;
             align-items: center;
+            @media screen and (max-width: $breakpoint-m) {
+                display: none;
+              }
+        }
+        &-faq{
+            @media screen and (max-width: $breakpoint-m) {
+                display: none;
+              }
+        }
+        &-us{
+            @media screen and (max-width: $breakpoint-m) {
+                display: none;
+              }
+        }
+        &-contact{
+            @media screen and (max-width: $breakpoint-m) {
+                width: 50%;
+                align-items: center;
+                margin-top: 20px;
+              }
         }
     }
     &_h3{
@@ -69,18 +89,12 @@ footer{
             width: 20px;
             height: auto;
             margin-right: 6px;
-            @media screen and (max-width: $breakpoint-s) {
-                display: none;
-            }
         }
         &-phone{
             content: url(../../Images/whappIcon.png);
             width: 20px;
             height: auto;
             margin-right: 6px;
-            @media screen and (max-width: $breakpoint-s) {
-                display: none;
-            }
         }
     }
     &_social{
@@ -95,9 +109,6 @@ footer{
     &__a{
         color: $white;
         font-family: $secondary-font;
-        @media screen and (max-width: $breakpoint-s) {
-            display: none;
-        }
         &-ig{
             content: url(../../Images/ig.png);
             width: 20px;

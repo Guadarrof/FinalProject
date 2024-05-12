@@ -15,7 +15,7 @@ const Footer = () => {
             className="footer__p"
           />
         </div>
-        <div className="footer_div">
+        <div className="footer_div footer_div-faq">
           <Text renderAs="h3" content="Compras" className="footer_h3" />
           <Link to="/faq/questions" className="footer__a">
             Medios de pago
@@ -27,7 +27,7 @@ const Footer = () => {
             FAQ
           </Link>
         </div>
-        <div className="footer_div">
+        <div className="footer_div footer_div-us">
           <Text renderAs="h3" content="Nosotros" className="footer_h3" />
           <Link to="/faq/contact" className="footer__a">
             Contactanos
@@ -39,7 +39,7 @@ const Footer = () => {
             Unite al grupo
           </Link>
         </div>
-        <div className="footer_div">
+        <div className="footer_div footer_div-contact">
           <Text renderAs="h3" content="Contacto" className="footer_h3" />
           <div className="footer_email">
             <Icon className="footer__span footer__span-email"></Icon>

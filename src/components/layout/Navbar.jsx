@@ -55,7 +55,7 @@ const Navbar = () => {
           Add products
         </Link>
       </div>
-      <div className="navbar_icons">
+      <div className="navbar_search">
         <SearchBar action={(e) => setSearch(e.target.value)} values={search} />
         {showDropdown && (
           <div className="search_result" ref={dropdownRef}>

@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "../components/atoms/Text";
 import Icon from "../components/molecules/Icon";
+import me from "../Images/me.svg"
 
 const AboutUs = () => {
   return (
@@ -8,7 +9,7 @@ const AboutUs = () => {
         <main>
           <div className="about_container">
             <div className="about_img">
-              <img src="../Images/me.svg" alt="imagen de Guadalupe" />
+              <img src={me} alt="imagen de Guadalupe" />
             </div>
             <div className="about_card">
               <div className="about_div about_div-info">

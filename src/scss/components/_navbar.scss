@@ -29,11 +29,11 @@
                 @include underline-pink;
             }
         }
-        @media screen and (max-width: $breakpoint-s) {
+        @media screen and (max-width: $breakpoint-m) {
             display: none;
         }
     }
-    &_icons{
+    &_search{
         display: flex;
         flex-direction: row;
     }
@@ -73,9 +73,6 @@
 .search_group{
     display: flex;
     align-items: center;
-    @media screen and (max-width: $breakpoint-m) {
-        display: none;
-    }
 }
 
 #searchBar{
@@ -101,7 +98,7 @@
     flex-direction: column;
     border-radius: 9px/9px;
     @media screen and (max-width: $breakpoint-m) {
-        display: none;
+        right: 25%;
     }
     &-item {
     padding: 8px 16px;
