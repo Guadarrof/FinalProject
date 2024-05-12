@@ -1,11 +1,11 @@
 import React from 'react';
-import FromSm from '../components/layout/FromSm';
+import FormSm from '../components/layout/FormSm';
 
 const Faq = () => {
   return (
     <>
       <main>
-        <FromSm
+        <FormSm
         formTitle="Contactanos"
         nameError
         emailError
