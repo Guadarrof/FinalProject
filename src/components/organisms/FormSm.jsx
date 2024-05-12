@@ -3,7 +3,7 @@ import Text from "../atoms/Text";
 import InputGroup from "../molecules/InputGroup";
 // import {validateEmail, validateName, validateMessage} from '../../JS/validations'
 import { useForm } from "../../hooks/useForm";
-import Form from "./Form";
+import Form from "../layout/Form";
 
 const INITIAL_STATE = {
   contactName: "",
