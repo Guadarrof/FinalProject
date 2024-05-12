@@ -4,15 +4,19 @@ import InputGroup from "../molecules/InputGroup";
 // import {validateEmail, validateName, validateMessage} from '../../JS/validations'
 import { useForm } from "../../hooks/useForm";
 import Form from "../layout/Form";
+import { postMessage } from "../../util/api";
 
 const INITIAL_STATE = {
   contactName: "",
   contactEmail: "",
+  contactSubject: "",
   contactMessage: "",
 };
 
 const FormSm = ({ formTitle }) => {
   const { values, handleInputChange, resetForm } = useForm(INITIAL_STATE);
+  const [loadingForm, setLoadingForm] = useState(false)
+
 
   const inputProps = {
     contactName: {
@@ -96,12 +100,19 @@ const FormSm = ({ formTitle }) => {
       <Form
         onSubmit={
           () => {
-            console.log(values);
-            resetForm()
+            setLoadingForm(true)
+            postMessage(values)
+              .then(data => console.log(data))
+              .catch ( err => console.error(err))
+              .finally(()=>{
+                setLoadingForm(false)
+                resetForm()
+              })
         }
       }
         btnLabel={"Enviar mensaje"}
         btnId={"btnContact"}
+        loading={loadingForm}
       >
         {Object.entries(inputProps)
         .map(
@@ -114,8 +125,6 @@ const FormSm = ({ formTitle }) => {
             {...props}
           />
         ))}
-
-
       </Form>
     </div>
   );

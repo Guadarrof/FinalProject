@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../atoms/Button';
 
-const Form = ({children, onSubmit, btnLabel, btnId}) => {
+const Form = ({children, onSubmit, btnLabel, btnId, loading}) => {
   return (
     <form onSubmit={
         e=>{
@@ -13,10 +13,10 @@ const Form = ({children, onSubmit, btnLabel, btnId}) => {
         <Button
             className="btn btn-s btn_primary-inverse"
             id={btnId}
-            label={btnLabel}
+            label={loading ? "Enviando..." : btnLabel}
             action={onSubmit}
             type="submit"
-            disabled={false}
+            disabled={loading}
             ariaLabel="Enviar"
           />
     </form>
