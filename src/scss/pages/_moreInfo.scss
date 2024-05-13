@@ -13,8 +13,19 @@
         display: flex;
         flex-direction: column;
         box-shadow: $base-shadow;
-        padding: 5% 10%;
-        margin: $margin-xl;
+        margin: 5rem 14rem;
+        padding: 1rem;
+        padding-bottom: 3rem;
+        @media screen and (max-width: $breakpoint-m) {
+            margin: 5rem 6rem;
+        }
+        @media screen and (max-width: $breakpoint-base) {
+            margin: 5rem 3rem;
+        }
+
+    }
+    &_img-container{
+        width: 100%;
     }
     &_img{
         height: 338px;
@@ -22,6 +33,9 @@
         display: flex;
         justify-content: center;
         @include  symetricImage;
+        @media screen and (max-width: $breakpoint-s) {
+            display: none;
+        }
     }
     &_content{
     display: flex;

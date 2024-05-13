@@ -38,8 +38,8 @@ const CardLg = () => {
           iconClass="btn_icon-back"
         />
         <div className="product_content">
-          <div className="product_img">
-            <img src={product.img} alt={product.imgAlt} />
+          <div className="product_img-container">
+            <img src={product.img} alt={product.imgAlt} className="product_img" />
           </div>
           <div className="product_card">
             <div className="product_div product_div-info">
@@ -78,12 +78,6 @@ const CardLg = () => {
             urlImg: product.img,
             price: product.price,
           }}
-        />
-        <Button
-          aria-label="Buy"
-          id="buy-btn"
-          className="btn btn_secondary btn-m"
-          label="Pagar"
         />
       </div>
     </>
