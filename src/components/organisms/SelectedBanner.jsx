@@ -10,11 +10,12 @@ const SelectedBanner = () => {
   useEffect(() => {
     getProducts()
       .then((data) => {
+        const uniqueToys = Array.from(new Set(data.map(toy => toy.id)))
+          .map(id => data.find(toy => toy.id === id));
         const randomToys = [];
         while (randomToys.length < 3) {
           const randomIndex = Math.floor(Math.random() * data.length);
-          const selectedToy = data[randomIndex];
-          randomToys.push(selectedToy);
+          randomToys.push(uniqueToys[randomIndex]);
         }
         setTodayToys(randomToys);
       })
