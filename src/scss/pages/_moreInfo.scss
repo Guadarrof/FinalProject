@@ -57,3 +57,16 @@
         }
     }
 }
+
+.main_products{
+    margin-top: 8%;
+    @media screen and (max-width: $breakpoint-l) {
+        margin-top: 12%;
+    }
+    @media screen and (max-width: $breakpoint-m) {
+        margin-top: 16%;
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        margin-top: 20%;
+    }
+}
