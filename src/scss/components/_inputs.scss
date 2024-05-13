@@ -20,6 +20,9 @@ input[type=text]{
 input[type=number]{
     height: 30px;
 }
+input[type=email]{
+    height: 30px;
+}
 
 input, textarea{
     border: 2px solid $secondary-color;
@@ -62,5 +65,10 @@ textarea{
     &_error{
         color: $alert-color;
         margin-top: 0;
+        font-size: $font-size-s;
     }
+}
+
+.input_field-error{
+    border: 2px solid $alert-color;
 }
