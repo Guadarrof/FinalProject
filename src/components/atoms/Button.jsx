@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "../molecules/Icon";
 
 const Button = ({
   label,
@@ -7,7 +8,8 @@ const Button = ({
   disabled,
   id,
   className,
-  ariaLabel
+  ariaLabel,
+  iconClass
 }) => {
   return (
     <button 
@@ -18,6 +20,7 @@ const Button = ({
     className={className}
     disabled={disabled}
     >
+      <Icon className={iconClass}/>
       {label}
     </button>
   );

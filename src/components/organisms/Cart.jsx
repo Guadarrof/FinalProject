@@ -26,8 +26,8 @@ const Cart = () => {
             aria-label="Close cart"
             id="btnClose"
             action={() => setOpen(false)}
-            className="btn btn_secondary-inverse btn_secondary-round"
-            label="X"
+            className="btn btn_icon btn_icon-s"
+            iconClass='btn_icon-close'
           />
         </div>
         <div className="modal_container-content">
