@@ -12,3 +12,32 @@
         margin-top: 15%;
     }
 }
+
+.faq{
+    &_main{
+        background-color: rgb(253, 247, 238);
+        padding-top: 2%;
+    }
+    &_container{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    }
+    &_question:nth-child(odd){
+        background-color: $secondary-color;
+        color: $white;
+        font-family: 'Bebas Neue';
+        padding: 3%;
+    }
+    &_question:nth-child(even){
+        background-color: $secondary-color;
+        color: $white;
+    }
+    &_answer{
+        background-color: rgb(253, 247, 238);
+        color: $font-color;
+        padding: 1%;
+    }
+}

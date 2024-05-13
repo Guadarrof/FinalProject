@@ -15,7 +15,7 @@ const INITIAL_STATE={
   category:'', 
   shortDescription:'',
   longDescription:'',
-  img:''
+  img:'https://m.media-amazon.com/images/I/81QV-NNnJTL._AC_UF894,1000_QL80_.jpg'
 }
 
 const FormLg = ({formTitle}) => {
