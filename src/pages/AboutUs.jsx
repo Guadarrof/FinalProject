@@ -2,12 +2,13 @@ import React from "react";
 import Text from "../components/atoms/Text";
 import Icon from "../components/molecules/Icon";
 import me from "../Images/me.svg"
+import FormSm from "../components/organisms/FormSm";
 
 const AboutUs = () => {
   return (
     <>
         <main>
-          <div className="about_container">
+          <div className="about_container" id="about">
             <div className="about_img">
               <img src={me} alt="imagen de Guadalupe" />
             </div>
@@ -52,6 +53,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
+          <FormSm formTitle="Trabaja con nosotros"/>
         </main>
     </>
   );

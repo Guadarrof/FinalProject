@@ -4,10 +4,8 @@ import Home from "../pages/Home";
 import ProductInfo from "../pages/ProductInfo";
 import AboutUs from "../pages/AboutUs";
 import Upload from "../pages/Upload";
-import Contact from "../components/layout/Contact";
 import Products from "../pages/Products";
 import Cart from "../components/organisms/Cart";
-import Questions from "../components/organisms/Questions"
 import Faq from "../pages/Faq"
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
@@ -24,12 +22,7 @@ const RoutesApp = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/faq" element={<Faq/>}>
-          <Route path="contact" element={<Contact />} />
-          <Route path="returns" element={<Questions/>}/>
-          <Route path="questions" element={<Questions/>}/>
-          <Route path="jobs" element={<Contact/>}/>
-        </Route>
+        <Route path="/faq" element={<Faq/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>
