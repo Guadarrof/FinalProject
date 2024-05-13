@@ -3,10 +3,12 @@ import Text from '../atoms/Text';
 import InputGroup from '../molecules/InputGroup';
 import Form from '../layout/Form'
 import {useForm} from '../../hooks/useForm'
+import { postProducts } from '../../util/api';
+import { validatePrice, validateStock, validateName, validateDescriptionSh, validateDescriptionLg } from '../../util/validations';
 
 
 const INITIAL_STATE={
-  product: '',
+  productName: '',
   price: 0,
   stock:0,
   brand:'',
@@ -26,57 +28,63 @@ const FormLg = ({formTitle}) => {
       inputLabel: "Nombre",
       nameValue: "productName",
       error: "productError",
-      placeholder: "Nombre del producto"
+      placeholder: "Nombre del producto",
+      validation: validateName
     },
     productPrice: {
       inputLabel: "Precio",
       inputType: "number",
-      nameValue: "productPrice",
-      error: "priceError"
+      nameValue: "price",
+      error: "priceError",
+      validation: validatePrice
     },
     productStock: {
       inputLabel: "Stock",
       inputType: "number",
-      nameValue: "productStock",
-      error: "stockError"
+      nameValue: "stock",
+      error: "stockError",
+      validation: validateStock
     },
     productBrand: {
       inputLabel: "Marca",
-      nameValue: "productBrand",
+      nameValue: "brand",
       error: "brandError",
-      placeholder: "Marca"
+      placeholder: "Marca",
+      validation: validateName
     },
     productCategory: {
       inputLabel: "Categoria",
-      nameValue: "productCategory",
+      nameValue: "category",
       error: "categoryError",
-      placeholder: "Categoria"
+      placeholder: "Categoria",
+      validation: validateName
     },
     productShortDescription: {
       inputLabel: "Descripcion corta",
       inputType: "textArea",
-      nameValue: "productShortDescription",
+      nameValue: "shortDescription",
       error: "shortDescriptionError",
-      placeholder: "Breve descripcion"
+      placeholder: "Breve descripcion",
+      validation: validateDescriptionSh
     },
     productLongDescription: {
       inputLabel: "Descripcion larga",
       inputType: "textArea",
-      nameValue: "productLongDescription",
+      nameValue: "longDescription",
       error: "longDescriptionError",
-      placeholder: "Descripcion completa del producto"
+      placeholder: "Descripcion completa del producto",
+      validation: validateDescriptionLg
     },
     productDelivery: {
       inputLabel: "Envio gratis",
       inputType: "checkbox",
-      nameValue: "productDelivery"
+      nameValue: "delivery"
     },
     productImage: {
       inputLabel: "Imagen del producto",
       inputType: "file",
-      nameValue: "productImage",
-      error: "imageError",
-      placeholder: "Subir imagen"
+      nameValue: "img",
+      error: "imageError"
     },
   };
 
@@ -87,7 +95,7 @@ const FormLg = ({formTitle}) => {
         onSubmit={
           () => {
             setLoadingForm(true)
-            postMessage(values)
+            postProducts(values)
               .then(data => console.log(data))
               .catch ( err => console.error(err))
               .finally(()=>{

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const InputGroup = ({
   inputType = "text",
   values,
-  onChange,
+  onChange = ()=>{},
+  validation = () => "",
   inputLabel,
-  error,
   id,
   placeholder,
   className,
@@ -13,8 +13,19 @@ const InputGroup = ({
   onBlur,
   nameValue,
 }) => {
+
+  const [error, setError] = useState("")
+
+  const validateOnChange = (e) => {
+    onChange(e);
+    setError(validation(e.target.value))
+  };
   return (
-    <div className={`${className} ${inputType === 'checkbox'? "form_checkbox" : ''}`}>
+    <div
+      className={`${className} ${
+        inputType === "checkbox" ? "form_checkbox" : ""
+      }`}
+    >
       <label htmlFor={id} hidden={hidden} className="input_label">
         {inputLabel}
       </label>
@@ -22,11 +33,12 @@ const InputGroup = ({
         <>
           <textarea
             value={values[id]}
-            onChange={onChange}
+            onChange={validateOnChange}
             onBlur={onBlur}
             id={id}
             name={nameValue}
             placeholder={placeholder}
+            className={`input_field${error ? "-error" : ''}`}
           />
           <p className="input_error">{error}</p>
         </>
@@ -35,11 +47,12 @@ const InputGroup = ({
           <input
             type={inputType}
             value={values[id]}
-            onChange={onChange}
+            onChange={validateOnChange}
             onBlur={onBlur}
             id={id}
             name={nameValue}
             placeholder={placeholder}
+            className={`input_field${error ? "-error" : ''}`}
           />
           <p className="input_error">{error}</p>
         </>
