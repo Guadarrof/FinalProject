@@ -14,8 +14,8 @@ const InputGroup = ({
   nameValue,
 }) => {
   return (
-    <div className={className}>
-      <label htmlFor={id} hidden={hidden}>
+    <div className={`${className} ${inputType === 'checkbox'? "form_checkbox" : ''}`}>
+      <label htmlFor={id} hidden={hidden} className="input_label">
         {inputLabel}
       </label>
       {inputType === "textArea" ? (
