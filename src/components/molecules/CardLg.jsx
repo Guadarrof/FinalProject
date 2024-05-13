@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "../atoms/Button";
 import Counter from "../molecules/Counter";
 import { getProducts } from "../../util/api";
+import Text from "../atoms/Text";
 
 const CardLg = () => {
   const { id } = useParams();
@@ -28,13 +29,6 @@ const CardLg = () => {
 
   return (
     <>
-      <Button
-        aria-label="Back"
-        id="back-btn"
-        className="btn btn_secondary btn-m"
-        action={() => navigate(-1)}
-        label="Back"
-      />
       <div className="product_container">
         <div className="product_content">
           <div className="product_img">
@@ -42,14 +36,11 @@ const CardLg = () => {
           </div>
           <div className="product_card">
             <div className="product_div product_div-info">
-              <h1 className="product__h1">{product.productName}</h1>
-              <p className="product__price card__price">{product.price}</p>
-              <h4 className="product__descript product__descript-short">
-                {product.shortDescription}
-              </h4>
-              <p className="product__descript product__descript-long">
-                {product.longDescription}
-              </p>
+              <Text renderAs="p" content={product.price} className="product__price card__price"/>
+              <Text renderAs="h1" content={product.productName} className="product__h1"/>
+              <Text renderAs="h2" content={product.brand} className="product__brand"/>
+              <Text renderAs="h4" content={product.shortDescription} className="product__descript product__descript-short"/>
+              <Text renderAs="p" content={product.longDescription} className="product__descript product__descript-long"/>
             </div>
           </div>
         </div>

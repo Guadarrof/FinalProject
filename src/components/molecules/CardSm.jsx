@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "./Counter";
 import { Link } from "react-router-dom";
+import Text from "../atoms/Text";
 
 const CardSm = ({
   routePrefix,
@@ -8,6 +9,7 @@ const CardSm = ({
   imgDescription,
   price,
   productName,
+  brand,
   description,
   id,
 }) => {
@@ -15,9 +17,10 @@ const CardSm = ({
     <div className="card card-m" id="product1">
       <img src={urlImg} alt={imgDescription} className="card_img" />
       <Link to={`${routePrefix}/${id}`} className="card_text">
-        <p className="card__price">{price}</p>
-        <h3 className="card__h3">{productName}</h3>
-        <p className="card__p">{description}</p>
+      <Text renderAs="p" content={price} className="card__price"/>
+      <Text renderAs="h3" content={productName} className="card__h3"/>
+      <Text renderAs="h4" content={brand} className="card__h4"/>
+      <Text renderAs="p" content={description} className="card__p"/>
       </Link>
       <Counter 
       id={id} 
