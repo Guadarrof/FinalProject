@@ -1,10 +1,8 @@
 import React from "react";
 import CardSm from "../molecules/CardSm";
 
-const CardsContainer = ({ items, routePrefix}) => {
+const CardsContainer = ({ items, routePrefix, cardWrapperClass}) => {
   console.log("Items:", items);
-  const cardWrapperClass = items.length < 3 ? "card_wrapper-sm" : "card_wrapper-lg";
-
   return (
     <div className= {`card_wrapper ${cardWrapperClass}`}>
       {items.map((item) => (
@@ -15,6 +13,7 @@ const CardsContainer = ({ items, routePrefix}) => {
           imgDescription={item.imgAlt}
           price={item.price}
           productName={item.productName}
+          brand={item.brand}
           description={item.shortDescription}
           moreInfo=""
           routePrefix={routePrefix}

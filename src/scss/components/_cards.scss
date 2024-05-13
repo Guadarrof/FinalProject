@@ -10,6 +10,14 @@
     padding: $base-padding;
     box-shadow: $base-shadow;
     margin: $base-margin;
+    width: calc(20% - 10px); 
+    margin-bottom: 20px;
+    @media screen and (max-width: $breakpoint-m) {
+        width: calc(31% - 10px);
+    }
+    @media screen and (max-width: $breakpoint-s) {
+        width: calc(100% - 10px);
+    }
     &-m{
     display: flex;
     flex-direction: column;
@@ -28,6 +36,7 @@
         height: 380px;
     }
     &_text{
+        width: 90%;
         height: 55%;
         margin-top:$base-margin;
         position: relative;

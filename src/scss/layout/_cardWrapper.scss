@@ -2,35 +2,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: $base-margin 15%;
-    @media screen and (max-width: $breakpoint-xl) {
-        margin: $base-margin 15%;      
-    }
-    @media screen and (max-width: $breakpoint-l) {
-        margin: $base-margin 10%;      
-    }
-    @media screen and (max-width: $breakpoint-m) {
-        flex-direction: column;  
-        align-items: center;  
-    }
+    margin:  5%;
     @media screen and (max-width: $breakpoint-s) {
-        margin: $base-margin 10%;      
+        margin: 20% 5%;  
     }
     &-lg{
         flex-wrap: wrap;
     }
     &-sm{
         flex-wrap: nowrap;
+        @media screen and (max-width: $breakpoint-m) {
+            margin: 2%;      
+        }
+        @media screen and (max-width: $breakpoint-s) {
+            flex-direction: column;   
+            align-items: center; 
+        }
     }
 }
 
-.card {
-    width: calc(33.33% - 10px); 
-    margin-bottom: 20px;
-    @media screen and (max-width: $breakpoint-m) {
-        width: calc(50% - 10px);
-    }
-    @media screen and (max-width: $breakpoint-s) {
-        width: calc(100% - 10px);
-    }
-}

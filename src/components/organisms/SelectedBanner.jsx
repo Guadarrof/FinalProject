@@ -28,7 +28,7 @@ const SelectedBanner = () => {
         content="Los elegidos del dia"
         className="section-cards_h2"
       />
-      <CardsContainer items={todayToys} routePrefix={`/productInfo`} />
+      <CardsContainer items={todayToys} routePrefix={`/productInfo`} cardWrapperClass='card_wrapper-sm'/>
     </div>
   );
 };

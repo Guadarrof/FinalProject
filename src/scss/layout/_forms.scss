@@ -2,7 +2,10 @@
 @use './index';
 
 .form{
+    display: flex;
+    flex-direction: column;
     box-shadow: $base-shadow;
+    
     padding: 5% 10%;
     &_container{
         display: flex;
@@ -13,6 +16,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: $margin-s
     }
     &_h2{
         font-family: $secondary-font;
@@ -20,21 +24,15 @@
         margin-bottom: $base-margin;
         font-size: $font-size-l;
     }
-    &__label{
-        margin-right: $margin-s;
-        margin-left: $margin-s;
-        margin-bottom: $margin-s;
-        margin-top: $margin-m;
-        font-size: $font-size-base;
-        font-weight: 600;   
-    }
-    &__input{
-        height: 40px;  
+    &_checkbox{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
     }
 
-    &_p{
-        color: $alert-color;
-        margin-top: 0;
-    }  
+}
 
+#btnContact, #btnUpload{
+    align-self: center;
 }

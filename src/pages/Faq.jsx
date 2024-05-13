@@ -4,7 +4,7 @@ import FormSm from '../components/organisms/FormSm';
 const Faq = () => {
   return (
     <>
-      <main>
+      <main className='contact_main'>
         <FormSm
         formTitle="Contactanos"
         />

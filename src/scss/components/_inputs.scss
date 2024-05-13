@@ -14,6 +14,13 @@ input[type=checkbox]:checked{
     accent-color: $primary-color !important;
 }
 
+input[type=text]{
+    height: 30px;
+}
+input[type=number]{
+    height: 30px;
+}
+
 input, textarea{
     border: 2px solid $secondary-color;
 }
@@ -46,3 +53,14 @@ textarea{
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
   }
   
+.input{
+    &_label{
+    margin: $margin-s;
+    font-size: $font-size-base;
+    font-weight: 600;   
+    }
+    &_error{
+        color: $alert-color;
+        margin-top: 0;
+    }
+}
