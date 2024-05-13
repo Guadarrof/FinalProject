@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Icon from "../molecules/Icon";
 import { CartContext } from "../../context/CartContext";
-import Modal from "./Modal";
+import Modal from "../molecules/Modal";
 import Button from "../atoms/Button";
 import CartItem from "../molecules/CartItem";
 
