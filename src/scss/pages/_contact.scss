@@ -5,3 +5,10 @@
     display: flex;
     justify-content: center;
 }
+
+.contact_main{
+    margin-top: 5%;
+    @media screen and (max-width: $breakpoint-m) {
+        margin-top: 15%;
+    }
+}
