@@ -3,7 +3,7 @@ import Button from '../atoms/Button';
 
 const Form = ({children, onSubmit, btnLabel, btnId, loading}) => {
   return (
-    <form onSubmit={
+    <form className='form' onSubmit={
         e=>{
             e.preventDefault();
             onSubmit();

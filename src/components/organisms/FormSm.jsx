@@ -120,6 +120,7 @@ const FormSm = ({ formTitle }) => {
           <InputGroup
             key ={key}
             id={key}
+            className="form_content"
             onChange={handleInputChange}
             values={values}
             {...props}
