@@ -1,8 +1,7 @@
 import axios from "axios";
-const PROJECT_TOKEN= '663840b14253a866a24d2846';
 
 const axiosInstance = axios.create({
-    baseURL:`https://${PROJECT_TOKEN}.mockapi.io/toyApi`
+    baseURL:`https://localhost:${PORT}/api`
 })
 
 axios.interceptors.request.use(
@@ -20,7 +19,7 @@ export const getProducts = async () => {
 }
 
 export const postMessage = async body => {
-    const resp = await axiosInstance.post("/message", body)
+    const resp = await axiosInstance.post("/messages", body)
     return resp.data;
 } 
 
