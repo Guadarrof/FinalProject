@@ -48,7 +48,7 @@ const InputGroup = ({
         <>
           <input
             type={inputType}
-            value={values[id]}
+            value={inputType !== "file" ? values[id] : ""}
             onChange={validateOnChange}
             onBlur={onBlur}
             id={id}

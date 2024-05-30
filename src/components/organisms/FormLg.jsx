@@ -15,7 +15,7 @@ const INITIAL_STATE={
   category:'', 
   shortDescription:'',
   longDescription:'',
-  img:'https://m.media-amazon.com/images/I/81QV-NNnJTL._AC_UF894,1000_QL80_.jpg'
+  delivery:false
 }
 
 const FormLg = ({formTitle}) => {
@@ -31,35 +31,35 @@ const FormLg = ({formTitle}) => {
       placeholder: "Nombre del producto",
       validation: validateName
     },
-    productPrice: {
+    price: {
       inputLabel: "Precio",
       inputType: "number",
       nameValue: "price",
       error: "priceError",
       validation: validatePrice
     },
-    productStock: {
+    stock: {
       inputLabel: "Stock",
       inputType: "number",
       nameValue: "stock",
       error: "stockError",
       validation: validateStock
     },
-    productBrand: {
+    brand: {
       inputLabel: "Marca",
       nameValue: "brand",
       error: "brandError",
       placeholder: "Marca",
       validation: validateName
     },
-    productCategory: {
+    category: {
       inputLabel: "Categoria",
       nameValue: "category",
       error: "categoryError",
       placeholder: "Categoria",
       validation: validateName
     },
-    productShortDescription: {
+    shortDescription: {
       inputLabel: "Descripcion corta",
       inputType: "textArea",
       nameValue: "shortDescription",
@@ -67,7 +67,7 @@ const FormLg = ({formTitle}) => {
       placeholder: "Breve descripcion",
       validation: validateDescriptionSh
     },
-    productLongDescription: {
+    longDescription: {
       inputLabel: "Descripcion larga",
       inputType: "textArea",
       nameValue: "longDescription",
@@ -75,16 +75,17 @@ const FormLg = ({formTitle}) => {
       placeholder: "Descripcion completa del producto",
       validation: validateDescriptionLg
     },
-    productDelivery: {
+    delivery: {
       inputLabel: "Envio gratis",
       inputType: "checkbox",
       nameValue: "delivery"
     },
-    productImage: {
+    image: {
       inputLabel: "Imagen del producto",
       inputType: "file",
-      nameValue: "img",
-      error: "imageError"
+      accept:"image/*",
+      error: "imageError",
+      nameValue: "image"
     },
   };
 
