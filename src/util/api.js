@@ -18,7 +18,6 @@ const axiosInstance = axios.create({
 
 export const getProducts = async () => {
     const resp = await axiosInstance.get("/products")
-    console.log(resp.data)
     return resp.data;
 }
 

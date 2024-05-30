@@ -12,8 +12,6 @@ const SelectedBanner = () => {
       .then((data) => {
         if (data.ok) {
           const products = data.products;
-          console.log("Productos recibidos:", JSON.stringify(products, null, 2));
-
           const uniqueToys = Array.from(new Set(products.map(toy => toy._id)))
             .map(id => products.find(toy => toy._id === id));
 

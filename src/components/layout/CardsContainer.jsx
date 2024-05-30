@@ -2,7 +2,6 @@ import React from "react";
 import CardSm from "../molecules/CardSm";
 
 const CardsContainer = ({ items, routePrefix, cardWrapperClass}) => {
-  console.log("Items:", items);
   return (
     <div className= {`card_wrapper ${cardWrapperClass}`}>
       {items.map((item) => (

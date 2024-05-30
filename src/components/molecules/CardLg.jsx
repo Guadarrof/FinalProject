@@ -15,10 +15,8 @@ const CardLg = () => {
   useEffect(() => {
     getProducts()
       .then((data) => {
-        console.log(`esta es LA DATA ${data}`)
         if(data.ok){
           const products = data.products
-          console.log(`estos son los productos ${products}`)
           setProduct(products.find((item) => item._id === id));
         setLoading(false);
         }
