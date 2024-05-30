@@ -12,6 +12,7 @@ const InputGroup = ({
   hidden = false,
   onBlur,
   nameValue,
+  ...props
 }) => {
 
   const [error, setError] = useState("")
@@ -39,6 +40,7 @@ const InputGroup = ({
             name={nameValue}
             placeholder={placeholder}
             className={`input_field${error ? "-error" : ''}`}
+            {...props}
           />
           <p className="input_error">{error}</p>
         </>
@@ -53,6 +55,7 @@ const InputGroup = ({
             name={nameValue}
             placeholder={placeholder}
             className={`input_field${error ? "-error" : ''}`}
+            {...props}
           />
           <p className="input_error">{error}</p>
         </>

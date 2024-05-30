@@ -15,8 +15,13 @@ const CardLg = () => {
   useEffect(() => {
     getProducts()
       .then((data) => {
-        setProduct(data.find((item) => item.id === id));
+        console.log(`esta es LA DATA ${data}`)
+        if(data.ok){
+          const products = data.products
+          console.log(`estos son los productos ${products}`)
+          setProduct(products.find((item) => item._id === id));
         setLoading(false);
+        }
       })
       .catch((error) => {
         setError(error);
@@ -39,7 +44,7 @@ const CardLg = () => {
         />
         <div className="product_content">
           <div className="product_img-container">
-            <img src={product.img} alt={product.imgAlt} className="product_img" />
+            <img src={product.imgUrl} alt={product.imgAlt} className="product_img" />
           </div>
           <div className="product_card">
             <div className="product_div product_div-info">
@@ -75,7 +80,7 @@ const CardLg = () => {
           id={id}
           productData={{
             productName: product.productName,
-            urlImg: product.img,
+            urlImg: product.imgUrl,
             price: product.price,
           }}
         />

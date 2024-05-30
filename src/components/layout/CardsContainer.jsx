@@ -7,9 +7,9 @@ const CardsContainer = ({ items, routePrefix, cardWrapperClass}) => {
     <div className= {`card_wrapper ${cardWrapperClass}`}>
       {items.map((item) => (
         <CardSm
-          id={item.id}
-          key={item.id}
-          urlImg={item.img}
+          id={item._id}
+          key={item._id}
+          urlImg={item.imgUrl}
           imgDescription={item.imgAlt}
           price={item.price}
           productName={item.productName}

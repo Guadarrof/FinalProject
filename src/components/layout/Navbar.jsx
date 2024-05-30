@@ -16,7 +16,7 @@ const Navbar = () => {
     getProducts()
       .then((data) => {
         const lowercaseSearch = search.toLowerCase();
-        const filteredToys = data.filter((product) =>
+        const filteredToys = data.products.filter((product) =>
           product.productName.toLowerCase().includes(lowercaseSearch)
         );
         setFoundToy(filteredToys);
@@ -61,8 +61,8 @@ const Navbar = () => {
           <div className="search_result" ref={dropdownRef}>
             {foundToy.map((toy) => (
               <Link
-                key={toy.id}
-                to={`productInfo/${toy.id}`}
+                key={toy._id}
+                to={`productInfo/${toy._id}`}
                 className="search_result-item"
               >
                 {toy.productName}
