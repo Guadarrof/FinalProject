@@ -1,20 +1,13 @@
 import axios from "axios";
 
+console.log(process.env.REACT_APP_BASE_URL_API)
+
 const axiosInstance = axios.create({
-    baseURL:`http://localhost:3001/api`,
+    baseURL: process.env.REACT_APP_BASE_URL_API,
     headers: {
         'Content-Type': 'multipart/form-data'
       }
 })
-
-// axios.interceptors.request.use(
-//     (config)=>{
-//         return config
-//     },
-//     error =>{
-//         return Promise.reject(error);
-//     }
-// )
 
 export const getProducts = async () => {
     const resp = await axiosInstance.get("/products")
