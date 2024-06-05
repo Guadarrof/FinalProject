@@ -32,7 +32,7 @@ const Cart = () => {
         </div>
         <div className="modal_container-content">
         {toysCart.length > 0 ? (
-            toysCart.map((data) => <CartItem key={data.id} {...data} />)
+            toysCart.map((data) => <CartItem key={data._id} {...data} />)
           ) : (
             <div className="cart__empty-group">
               <Icon className='cart__empty-logo'/>

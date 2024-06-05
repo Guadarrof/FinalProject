@@ -6,23 +6,22 @@ import { CartContext } from '../../context/CartContext'
 import Alert from '../molecules/Alert'
 
 
-const Counter = ({id, productData, initialValue=0 }) => {
+const Counter = ({_id, initialValue=0 }) => {
   const [count, setCount] = useState(initialValue)
   const { addToys, removeToys, toysCart } = useContext(CartContext)
   const [showAlert, setShowAlert] = useState(false);
 
 
   useEffect(() => {
-    const toys = toysCart.find (toy => toy.id === id)
+    const toys = toysCart.find (toy => toy._id === _id)
         setCount(toys?.quantity || 0)
-    }, [toysCart, id])
+    }, [toysCart, _id])
 
   const increment = (e)=>{
     e.stopPropagation()
     setCount (count+1);
     addToys({
-      id,
-      productData,
+      _id,
       quantity: count + 1
     })
     setShowAlert(true);
@@ -30,7 +29,7 @@ const Counter = ({id, productData, initialValue=0 }) => {
   const decrement = (e)=>{
     e.stopPropagation()
     if(count> 0) setCount(count - 1);
-    removeToys(id);
+    removeToys(_id);
 }
 
   return (
