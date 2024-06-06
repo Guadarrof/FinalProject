@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL_API,
-    headers: {
-        'Content-Type': 'multipart/form-data'
-      }
+    baseURL: process.env.REACT_APP_BASE_URL_API
 })
 
 export const getProducts = async () => {
@@ -35,7 +32,7 @@ export const postCart = async body => {
     return resp.data;
 } 
 
-export const editCart = async (id,body) => {
+export const editCart = async (id, body) => {
     const resp = await axiosInstance.put(`/cart/edit/${id}`, {items: body})
     return resp.data;
 } 

@@ -13,7 +13,7 @@ const Counter = ({_id, initialValue=0 }) => {
 
 
   useEffect(() => {
-    const toys = toysCart.find (toy => toy._id === _id)
+    const toys = toysCart.find (toy => toy.product._id === _id)
         setCount(toys?.quantity || 0)
     }, [toysCart, _id])
 
@@ -29,7 +29,7 @@ const Counter = ({_id, initialValue=0 }) => {
   const decrement = (e)=>{
     e.stopPropagation()
     if(count> 0) setCount(count - 1);
-    removeToys(_id);
+    removeToys({_id});
 }
 
   return (

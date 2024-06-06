@@ -23,7 +23,7 @@ const CardSm = ({
       <Text renderAs="p" content={description} className="card__p"/>
       </Link>
       <Counter 
-      id={id} 
+      _id={id} 
       productData={{
         productName, 
         urlImg,

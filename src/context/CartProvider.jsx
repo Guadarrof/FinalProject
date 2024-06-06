@@ -14,7 +14,7 @@ const CartProvider = ({ children }) => {
     const toyFound = toysCart.find((toy) => toy.product?._id === _id);
     if (toyFound) {
       const newCart = toysCart.map((toy) =>
-        toy.product?._id === data.product ? { ...toy, quantity: toy.quantity + quantity } : toy
+        toy.product?._id === data.product ? { ...toy, quantity: quantity } : toy
       );
       editCart(idCart, newCart)
               .then(({cart}) => {
@@ -39,12 +39,12 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  const removeToys = (id) => {
-    const toyFound = toysCart.find((toy) => toy.id === id);
+  const removeToys = ({_id}) => {
+    const toyFound = toysCart.find((toy) => toy.product._id === _id);
     if (idCart) {
       if (toyFound?.quantity > 1) {
         const newCart = toysCart.map((toy) =>
-          toy._id === id
+          toy.product._id === _id
             ? {
                 ...toy,
                 quantity: toy.quantity - 1,
@@ -55,7 +55,7 @@ const CartProvider = ({ children }) => {
                 .then(({cart})=> setToysCart(cart.items));
 
       } else {
-        const newCart = toysCart.filter(toy => toy.product?._id !== id)
+        const newCart = toysCart.filter(toy => toy.product?._id !== _id)
         editCart(idCart, newCart)
                 .then(({cart}) => setToysCart(cart.items));
       }
