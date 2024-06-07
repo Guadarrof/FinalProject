@@ -61,6 +61,24 @@
   }
 }
 
+.cart__thanks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30% 10%;
+  &-text{
+    font-size: $font-size-m;
+    font-family: $secondary-font;
+  }
+  &-logo{
+    content: url(../../Images/celebrate.png);
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
 #btnClose {
   margin: 1rem;
 }

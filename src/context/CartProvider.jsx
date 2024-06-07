@@ -78,6 +78,12 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const resetCart = ()=> {
+    setIdCart(null)
+    localStorage.removeItem("cartId")
+    setToysCart([])
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -85,7 +91,8 @@ const CartProvider = ({ children }) => {
         addToys,
         removeToys,
         showAlert,
-        setShowAlert
+        setShowAlert,
+        resetCart
       }}
     >
       {children}
