@@ -3,13 +3,10 @@ import Button from '../atoms/Button'
 import Text from '../atoms/Text'
 import { useState, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-import Alert from '../molecules/Alert'
-
 
 const Counter = ({_id, initialValue=0 }) => {
   const [count, setCount] = useState(initialValue)
   const { addToys, removeToys, toysCart } = useContext(CartContext)
-  const [showAlert, setShowAlert] = useState(false);
 
 
   useEffect(() => {
@@ -24,7 +21,6 @@ const Counter = ({_id, initialValue=0 }) => {
       _id,
       quantity: count + 1
     })
-    setShowAlert(true);
   }
   const decrement = (e)=>{
     e.stopPropagation()
@@ -54,9 +50,6 @@ const Counter = ({_id, initialValue=0 }) => {
         className='counter-btn'
         />
     </div>
-    <Alert show={showAlert} onClose={() => setShowAlert(false)}>
-        <p className='alert_text'>Producto Agregado</p>
-    </Alert>
   </>
   )
 }
