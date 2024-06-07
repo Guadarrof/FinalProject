@@ -1,12 +1,22 @@
+.alert_container {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  top: 200px;
+  right: -220px;
+  flex-direction: column;
+  background-color: rgb(255, 253, 245);
+  padding: 20px;
+  margin-bottom: 0;
+  color: $secondary-color;
+  transition: right 0.5s ease-in-out;
+  z-index: 1000;
+  box-shadow: $base-shadow;
+}
 
-.alert_container{
-    width: 200px;
-    height: 60px;
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(255, 253, 245);
-    padding: 10px;
-    margin-bottom: 0;
-    color: $font-color;
-
-  }
+.alert_container.show {
+  right: 20px;
+}
