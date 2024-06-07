@@ -9,7 +9,7 @@ const CartAlert = () => {
     if (showAlert) {
       const timer = setTimeout(() => {
         setShowAlert(false);
-      }, 3000);
+      }, 1500);
       return () => clearTimeout(timer);
     }
   }, [showAlert, setShowAlert]);
