@@ -5,41 +5,49 @@ import { editCart, postCart } from "../util/api";
 const CartProvider = ({ children }) => {
   const [idCart, setIdCart] = useState(null);
   const [toysCart, setToysCart] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
 
   const addToys = ({ _id, quantity }) => {
     const data = {
       quantity,
-      product: _id
+      product: _id,
     };
     const toyFound = toysCart.find((toy) => toy.product?._id === _id);
-    if (toyFound) {
-      const newCart = toysCart.map((toy) =>
-        toy.product?._id === data.product ? { ...toy, quantity: quantity } : toy
-      );
-      editCart(idCart, newCart)
-              .then(({cart}) => {
-                console.log(cart)
-                setToysCart(cart.items)
-              });
-    } else {
-      if (!idCart) {
-        postCart([data])
-          .then(({cart}) => {
-            console.log(cart)
+
+    try {
+      if (toyFound) {
+        const newCart = toysCart.map((toy) =>
+          toy.product?._id === data.product
+            ? { ...toy, quantity: quantity }
+            : toy
+        );
+        editCart(idCart, newCart).then(({ cart }) => {
+          console.log(cart);
+          setToysCart(cart.items);
+        });
+        setShowAlert(true);
+      } else {
+        if (!idCart) {
+          postCart([data]).then(({ cart }) => {
+            console.log(cart);
             setIdCart(cart._id);
             setToysCart(cart.items);
-            });
-      } else {
-        const newCart = [...toysCart, data];
-        editCart(idCart, newCart)
-                .then(({cart}) => {
-                  console.log(cart)
-                  setToysCart(cart.items)});
+          });
+        } else {
+          const newCart = [...toysCart, data];
+          editCart(idCart, newCart).then(({ cart }) => {
+            console.log(cart);
+            setToysCart(cart.items);
+          });
+        }
+        setShowAlert(true);
       }
+    } catch (error) {
+      console.error("Error al agregar productos al carrito:", error);
     }
   };
 
-  const removeToys = ({_id}) => {
+  const removeToys = ({ _id }) => {
     const toyFound = toysCart.find((toy) => toy.product._id === _id);
     if (idCart) {
       if (toyFound?.quantity > 1) {
@@ -51,13 +59,10 @@ const CartProvider = ({ children }) => {
               }
             : toy
         );
-        editCart(idCart, newCart)
-                .then(({cart})=> setToysCart(cart.items));
-
+        editCart(idCart, newCart).then(({ cart }) => setToysCart(cart.items));
       } else {
-        const newCart = toysCart.filter(toy => toy.product?._id !== _id)
-        editCart(idCart, newCart)
-                .then(({cart}) => setToysCart(cart.items));
+        const newCart = toysCart.filter((toy) => toy.product?._id !== _id);
+        editCart(idCart, newCart).then(({ cart }) => setToysCart(cart.items));
       }
     }
   };
@@ -68,6 +73,8 @@ const CartProvider = ({ children }) => {
         toysCart,
         addToys,
         removeToys,
+        showAlert,
+        setShowAlert
       }}
     >
       {children}
