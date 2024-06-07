@@ -25,6 +25,9 @@
       width: 100%;
       justify-content: end;
     }
+    &-content{
+      height: 100%;
+    }
   }
   &__cart{
     display: flex;

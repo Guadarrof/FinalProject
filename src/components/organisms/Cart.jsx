@@ -31,7 +31,7 @@ const Cart = () => {
           </div>
         )}
       </div>
-      <Modal show={open} onClose={()=>setOpen(false)}>
+      <Modal show={open} className="modal_container">
         <div className="modal_container-header">
           <Button
             aria-label="Close cart"
@@ -62,7 +62,7 @@ const Cart = () => {
           id="btnBuy"
           label="Pagar"
           action={handlePurchase}
-          className="btn btn-m"
+          className="btn btn-m btn-buy"
         />
       )}
     </Modal>
