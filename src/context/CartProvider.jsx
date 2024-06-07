@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
-import { editCart, postCart } from "../util/api";
+import { editCart, getCart, postCart } from "../util/api";
 
 const CartProvider = ({ children }) => {
   const [idCart, setIdCart] = useState(null);
   const [toysCart, setToysCart] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    const storedIdCart = localStorage.getItem("cartId")
+      if(storedIdCart){
+        getCart(storedIdCart)
+          .then(({ cart }) => {
+            setToysCart(cart.items);
+            setIdCart(storedIdCart);
+          });
+      }
+  }, [])
+  
 
   const addToys = ({ _id, quantity }) => {
     const data = {
@@ -22,21 +34,20 @@ const CartProvider = ({ children }) => {
             : toy
         );
         editCart(idCart, newCart).then(({ cart }) => {
-          console.log(cart);
           setToysCart(cart.items);
         });
         setShowAlert(true);
       } else {
         if (!idCart) {
-          postCart([data]).then(({ cart }) => {
-            console.log(cart);
+          postCart([data])
+          .then(({ cart }) => {
+            localStorage.setItem("cartId", cart._id)
             setIdCart(cart._id);
             setToysCart(cart.items);
           });
         } else {
           const newCart = [...toysCart, data];
           editCart(idCart, newCart).then(({ cart }) => {
-            console.log(cart);
             setToysCart(cart.items);
           });
         }
