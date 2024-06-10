@@ -5,7 +5,7 @@ import CartAlert from "./components/organisms/CartAlert";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       <CartProvider>
         <CartAlert/>
         <RoutesApp/>
