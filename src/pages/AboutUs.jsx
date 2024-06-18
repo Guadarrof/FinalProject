@@ -21,7 +21,7 @@ const AboutUs = () => {
                 />
                 <Text
                   renderAs="h3"
-                  content="Disenadora UX/UI - futura fullStack developer"
+                  content="Disenadora UX/UI - FullStack developer"
                   className="about__h3"
                 />
                 <Text
